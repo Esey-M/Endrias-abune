@@ -1,0 +1,999 @@
+/* Smooth transitions */
+* {
+    transition: opacity 0.3s ease;
+}
+
+/* Make body flex to push footer to bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Slow zoom in and out animation - base animation for mobile */
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Slow zoom in and out animation - for desktop */
+@keyframes zoomInOutDesktop {
+    0%, 100% {
+        transform: scale(1.02);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* Hero background image - different images for mobile and desktop */
+.hero-bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    /* Default: mobile image - path relative to CSS file location */
+    background-image: url('../images/mobile-hero-image.jpg');
+    filter: blur(0px);
+    transform: scale(1);
+    animation: zoomInOut 15s ease-in-out infinite;
+}
+
+/* On desktop/tablet (769px and up), use desktop image */
+@media (min-width: 769px) {
+    .hero-bg-image {
+        background-image: url('../images/desktop-hero-image.jpg');
+        filter: blur(0.5px);
+        transform: scale(1.02);
+        animation: zoomInOutDesktop 15s ease-in-out infinite;
+    }
+}
+
+/* Hero section background image overlay */
+.hero-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.75), rgba(30, 64, 175, 0.75));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Smooth transition between side-by-side images */
+.hero-image-transition {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-transition::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 100%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Enhanced text shadows for better readability over images */
+.drop-shadow-lg {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.drop-shadow-md {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo zoom and crop to show only circular emblem */
+nav a.logo-container,
+body nav .logo-container,
+.logo-container {
+    overflow: hidden !important;
+    display: block !important;
+    border: 3px solid #2563eb !important; /* Blue border */
+    border-radius: 50% !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    aspect-ratio: 1 / 1 !important;
+    width: 5rem !important;
+    height: 5rem !important;
+    flex-shrink: 0 !important;
+    min-width: 5rem !important;
+    min-height: 5rem !important;
+    max-width: 5rem !important;
+    max-height: 5rem !important;
+}
+
+nav a.logo-container:hover,
+body nav .logo-container:hover,
+.logo-container:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+nav a.logo-container img.logo-img,
+body nav .logo-container img.logo-img,
+.logo-container img.logo-img,
+.logo-img {
+    object-fit: cover !important;
+    object-position: center 60% !important;
+    transform: scale(2) !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    transition: transform 0.3s ease !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+nav a.logo-container:hover img.logo-img,
+body nav .logo-container:hover img.logo-img,
+.logo-container:hover .logo-img {
+    transform: scale(2.1) !important;
+}
+
+/* Card hover effects with zoom */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Image hover zoom effect */
+.img-zoom {
+    transition: transform 0.4s ease, filter 0.3s ease;
+    overflow: hidden;
+}
+
+.img-zoom:hover {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+/* Button hover effects */
+.btn-hover {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-hover:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Link hover effects */
+.link-hover {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+.link-hover:hover {
+    color: #2563eb;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Staggered fade in for cards */
+.fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s both;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Pulse animation for loading */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #2563eb;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 20%,
+        #f6f7f8 40%,
+        #f6f7f8 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Scale on hover for interactive elements */
+.scale-hover {
+    transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Rotate on hover */
+.rotate-hover {
+    transition: transform 0.3s ease;
+}
+
+.rotate-hover:hover {
+    transform: rotate(5deg);
+}
+
+/* Accordion styles for yearbook */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+    max-height: 2000px;
+}
+
+/* Smooth page transitions */
+.page-transition {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Navbar link hover effect */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Form input focus effects */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* Table row hover effect */
+tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+tr:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.01);
+}
+
+/* Icon hover effects */
+.icon-hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: #2563eb;
+}
+
+/* ============================================
+   PHASE 1: NAVIGATION IMPROVEMENTS
+   ============================================ */
+
+/* Active page indicator */
+nav a.nav-active {
+    color: #2563eb;
+    font-weight: 600;
+    background-color: rgba(37, 99, 235, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+}
+
+nav a.nav-active::after {
+    width: 100%;
+    height: 3px;
+    background-color: #2563eb;
+}
+
+/* Navbar backdrop blur */
+nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile menu animation */
+#nav-menu.mobile-menu-open {
+    animation: slideDown 0.3s ease-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 50;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   PHASE 2: TYPOGRAPHY & SPACING
+   ============================================ */
+
+/* Google Fonts - Inter for Dutch, Noto Sans Ethiopic for Tigrinya */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+/* Tigrinya text optimization */
+[lang="ti"],
+[data-lang="ti"] {
+    font-family: 'Noto Sans Ethiopic', 'Abyssinica SIL', 'Nyala', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+/* Typography hierarchy */
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ============================================
+   PHASE 3: VISUAL ENHANCEMENTS
+   ============================================ */
+
+/* Card design improvements */
+.card-hover {
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+    border-color: #2563eb;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Color accents - Gold/Yellow */
+:root {
+    --accent-gold: #f59e0b;
+    --accent-yellow: #eab308;
+}
+
+.accent-gold {
+    color: var(--accent-gold);
+}
+
+.accent-yellow {
+    color: var(--accent-yellow);
+}
+
+.bg-accent-gold {
+    background-color: var(--accent-gold);
+}
+
+.bg-accent-yellow {
+    background-color: var(--accent-yellow);
+}
+
+/* Gradient combinations (blue + gold) */
+.gradient-blue-gold {
+    background: linear-gradient(135deg, #2563eb 0%, #f59e0b 100%);
+}
+
+/* Shadow refinement */
+.shadow-refined {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-elevated {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-deep {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-hover:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* SVG Icon styles */
+.svg-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.svg-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: #2563eb;
+}
+
+/* ============================================
+   PHASE 4: INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Scroll to top button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Enhanced loading states */
+.skeleton-loader {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 0.375rem;
+}
+
+.image-skeleton {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 0.375rem;
+}
+
+/* Button ripple effect */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Consistent button styles */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(107, 114, 128, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #2563eb;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-outline:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================
+   PHASE 5: CONTENT PRESENTATION
+   ============================================ */
+
+/* Image placeholders */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Section dividers */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #e5e7eb 20%,
+        #e5e7eb 80%,
+        transparent
+    );
+    margin: 3rem 0;
+}
+
+.section-divider-thick {
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #2563eb 20%,
+        #2563eb 80%,
+        transparent
+    );
+    margin: 4rem 0;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.breadcrumbs a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #9ca3af;
+}
+
+/* ============================================
+   PHASE 6: MOBILE OPTIMIZATIONS
+   ============================================ */
+
+/* Touch target sizes - ensure minimum 44x44px */
+@media (max-width: 768px) {
+    button,
+    a,
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    nav a {
+        padding: 0.75rem 1rem;
+        display: block;
+    }
+    
+    /* Mobile menu touch targets */
+    #nav-menu.mobile-menu-open a {
+        padding: 1rem;
+        font-size: 1.125rem;
+    }
+}
+
+/* Bottom navigation for mobile (optional) */
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    z-index: 50;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 0.75rem;
+    min-width: 60px;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover,
+.bottom-nav a.active {
+    color: #2563eb;
+}
+
+.bottom-nav svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Social Media Icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px) scale(1.1);
+    color: white;
+}
+
+.social-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+

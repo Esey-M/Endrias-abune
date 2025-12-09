@@ -1,5 +1,8 @@
 const translations = {
   ti: {
+    // Church Name
+    church_name: "ኣቡነ እንድርያስ",
+    
     // Navigation
     nav_home: "መኣዲ",
     nav_about: "ብዛዕባና",
@@ -66,6 +69,7 @@ const translations = {
     contact_sunday: "ሰንበት",
     contact_wednesday: "ኣርብዓ",
     contact_friday: "ዓርቢ",
+    contact_saturday: "ቀዳም",
     
     // Leader names and roles (Church Leaders - 5)
     leader1_name: "ኣቶ ስም ኣቦ",
@@ -98,6 +102,9 @@ const translations = {
     ss_leader8_role: "ኣለላዊ ትምህርቲ",
   },
   nl: {
+    // Church Name
+    church_name: "Abune Endrias",
+    
     // Navigation
     nav_home: "Home",
     nav_about: "Over Ons",
@@ -164,6 +171,7 @@ const translations = {
     contact_sunday: "Zondag",
     contact_wednesday: "Woensdag",
     contact_friday: "Vrijdag",
+    contact_saturday: "Zaterdag",
     
     // Leader names and roles (Church Leaders - 5)
     leader1_name: "Dhr. Naam Eén",

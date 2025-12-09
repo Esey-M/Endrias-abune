@@ -29,11 +29,13 @@ function setLanguage(lang) {
   // Update language toggle buttons
   updateLanguageButtons();
   
-  // Add smooth transition effect
+  // Add smooth transition effect with fade
+  document.body.classList.add('page-transition');
   document.body.style.opacity = '0.8';
   setTimeout(() => {
     document.body.style.opacity = '1';
-  }, 150);
+    document.body.classList.remove('page-transition');
+  }, 200);
 }
 
 // Update all elements with data-translate attribute
