@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our vision">
+    <title data-translate="vision_title">Visie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="flex flex-wrap justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50">
+        <div class="font-bold text-xl text-blue-700 mb-2 md:mb-0">Church Name</div>
+        
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-blue-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <ul id="nav-menu" class="hidden md:flex gap-6 items-center flex-wrap">
+            <li><a href="index.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_home">Home</a></li>
+            <li><a href="about.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_about">Over Ons</a></li>
+            <li><a href="mission.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_mission">Missie</a></li>
+            <li><a href="vision.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_vision">Visie</a></li>
+            <li><a href="yearbook.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_yearbook">Jaarboek</a></li>
+            <li><a href="services.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_services">Diensten</a></li>
+            <li><a href="church-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_church_leaders">Kerkleiders</a></li>
+            <li><a href="sunday-school-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_sunday_school">Zondagsschool</a></li>
+            <li><a href="contact.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_contact">Contact</a></li>
+        </ul>
+        
+        <div class="flex gap-2 mt-2 md:mt-0">
+            <button id="lang-ti" onclick="setLanguage('ti')" class="px-3 py-1 border rounded bg-gray-100 text-gray-700 hover:bg-blue-100 transition">Ti</button>
+            <button id="lang-nl" onclick="setLanguage('nl')" class="px-3 py-1 border rounded bg-blue-600 text-white hover:bg-blue-700 transition">NL</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-translate="vision_title">Visie</h1>
+            <p class="text-xl" data-translate="vision_subtitle">Onze visie</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-translate="vision_content">
+                    Onze visie is om een bloeiende gemeenschap te zijn die Christus dient en anderen helpt om Hem te leren kennen.
+                </p>
+                <div class="space-y-6 mt-8">
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Toekomstgericht</h3>
+                        <p class="text-gray-700">We streven ernaar om een kerk te zijn die relevant is voor toekomstige generaties.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Inclusief</h3>
+                        <p class="text-gray-700">Iedereen is welkom, ongeacht achtergrond of situatie.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Groeiend</h3>
+                        <p class="text-gray-700">We willen continu groeien in geloof, aantal en impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Church Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.add('flex-col', 'w-full', 'mt-4', 'gap-4');
+        });
+    </script>
+</body>
+</html>
+
