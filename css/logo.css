@@ -1,0 +1,138 @@
+/* ============================================
+   LOGO STYLES - Separate file to avoid conflicts
+   Load this AFTER styles.css and Tailwind
+   ============================================ */
+
+/* Logo Container - Circular border - EXACT SAME SIZE ON ALL PAGES */
+html body nav a.logo-container,
+html body nav .logo-container,
+html body .logo-container,
+nav a.logo-container,
+body nav .logo-container,
+.logo-container {
+    overflow: hidden !important;
+    display: block !important;
+    border: 3px solid #2563eb !important;
+    border-radius: 50% !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    aspect-ratio: 1 / 1 !important;
+    width: 5rem !important;
+    height: 5rem !important;
+    flex-shrink: 0 !important;
+    min-width: 5rem !important;
+    min-height: 5rem !important;
+    max-width: 5rem !important;
+    max-height: 5rem !important;
+    box-sizing: border-box !important;
+}
+
+/* Logo Container Hover */
+nav a.logo-container:hover,
+body nav .logo-container:hover,
+.logo-container:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Logo Image - SAME SIZE FOR ALL PAGES (Desktop) */
+/* Using maximum specificity - this MUST override everything */
+html body nav a.logo-container img.logo-img,
+html body nav .logo-container img.logo-img,
+html body .logo-container img.logo-img,
+html body .logo-img,
+html body.home-page nav a.logo-container img.logo-img,
+html body.home-page nav .logo-container img.logo-img,
+html body.home-page .logo-container img.logo-img,
+html body.home-page .logo-img,
+html body.bg-gray-50 nav a.logo-container img.logo-img,
+html body.bg-gray-50 .logo-container img.logo-img,
+html body.bg-gray-50 .logo-img,
+img.logo-img,
+.logo-img,
+nav a.logo-container img.logo-img,
+body nav a.logo-container img.logo-img,
+body nav .logo-container img.logo-img,
+body .logo-container img.logo-img,
+.logo-container img.logo-img,
+body .logo-img,
+body.home-page nav a.logo-container img.logo-img,
+body.home-page nav .logo-container img.logo-img,
+body.home-page .logo-container img.logo-img,
+body.home-page .logo-img,
+.home-page nav a.logo-container img.logo-img,
+.home-page body nav .logo-container img.logo-img,
+.home-page .logo-container img.logo-img,
+.home-page .logo-img {
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.6) !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    transition: transform 0.3s ease !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Logo Image Hover - SAME FOR ALL PAGES */
+nav a.logo-container:hover img.logo-img,
+body nav a.logo-container:hover img.logo-img,
+body nav .logo-container:hover img.logo-img,
+body .logo-container:hover img.logo-img,
+.logo-container:hover img.logo-img,
+body .logo-container:hover .logo-img,
+.logo-container:hover .logo-img,
+body.home-page nav a.logo-container:hover img.logo-img,
+body.home-page nav .logo-container:hover img.logo-img,
+body.home-page .logo-container:hover img.logo-img,
+body.home-page .logo-container:hover .logo-img,
+.home-page nav a.logo-container:hover img.logo-img,
+.home-page body nav .logo-container:hover img.logo-img,
+.home-page .logo-container:hover img.logo-img,
+.home-page .logo-container:hover .logo-img {
+    transform: scale(1.7) !important;
+}
+
+/* Mobile - SAME SIZE AS DESKTOP FOR ALL PAGES */
+@media (max-width: 768px) {
+    img.logo-img,
+    .logo-img,
+    nav a.logo-container img.logo-img,
+    body nav a.logo-container img.logo-img,
+    body nav .logo-container img.logo-img,
+    body .logo-container img.logo-img,
+    .logo-container img.logo-img,
+    body .logo-img,
+    body.home-page nav a.logo-container img.logo-img,
+    body.home-page nav .logo-container img.logo-img,
+    body.home-page .logo-container img.logo-img,
+    body.home-page .logo-img,
+    .home-page nav a.logo-container img.logo-img,
+    .home-page body nav .logo-container img.logo-img,
+    .home-page .logo-container img.logo-img,
+    .home-page .logo-img {
+        transform: scale(1.6) !important;
+    }
+    
+    nav a.logo-container:hover img.logo-img,
+    body nav a.logo-container:hover img.logo-img,
+    body nav .logo-container:hover img.logo-img,
+    body .logo-container:hover img.logo-img,
+    .logo-container:hover img.logo-img,
+    body .logo-container:hover .logo-img,
+    .logo-container:hover .logo-img,
+    body.home-page nav a.logo-container:hover img.logo-img,
+    body.home-page nav .logo-container:hover img.logo-img,
+    body.home-page .logo-container:hover img.logo-img,
+    body.home-page .logo-container:hover .logo-img,
+    .home-page nav a.logo-container:hover img.logo-img,
+    .home-page body nav .logo-container:hover img.logo-img,
+    .home-page .logo-container:hover img.logo-img,
+    .home-page .logo-container:hover .logo-img {
+        transform: scale(1.7) !important;
+    }
+}
+

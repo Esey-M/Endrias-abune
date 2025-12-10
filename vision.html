@@ -10,36 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <!-- Force logo size consistency - inline to ensure it loads -->
+    <style>
+        /* Emergency override - ensure logo is same size everywhere */
+        html body nav a.logo-container img.logo-img {
+            transform: scale(1.6) !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="flex flex-wrap justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50">
-        <div class="flex items-center gap-3 mb-2 md:mb-0">
+        <div class="flex items-center gap-3 mb-2 xl:mb-0 mr-4 xl:mr-8">
             <a href="index.html" class="logo-container">
                 <img src="images/logo.png" alt="Abune Endrias Church Logo" class="logo-img" loading="eager">
             </a>
             <span class="font-bold text-xl text-blue-700" data-translate="church_name">Abune Endrias</span>
         </div>
         
-        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-blue-700">
+        <!-- Mobile/Tablet menu button (shows on screens smaller than xl/1280px) -->
+        <button id="mobile-menu-btn" class="xl:hidden text-gray-700 hover:text-blue-700">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
         
-        <ul id="nav-menu" class="hidden md:flex gap-6 items-center flex-wrap">
+        <!-- Navigation Links (hidden on mobile/tablet/iPad, shown on xl screens and up - 1280px+) -->
+        <ul id="nav-menu" class="hidden xl:flex gap-4 items-center">
             <li><a href="index.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_home">Home</a></li>
-            <li><a href="about.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_about">Over Ons</a></li>
-            <li><a href="mission.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_mission">Missie</a></li>
-            <li><a href="vision.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_vision">Visie</a></li>
-            <li><a href="yearbook.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_yearbook">Jaarboek</a></li>
             <li><a href="services.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_services">Diensten</a></li>
             <li><a href="church-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_church_leaders">Kerkleiders</a></li>
             <li><a href="sunday-school-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_sunday_school">Zondagsschool</a></li>
+            <li><a href="mission.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_mission">Missie</a></li>
+            <li><a href="vision.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_vision">Visie</a></li>
+            <li><a href="yearbook.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_yearbook">Jaarboek</a></li>
+            <li><a href="about.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_about">Over Ons</a></li>
             <li><a href="contact.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_contact">Contact</a></li>
         </ul>
         
-        <div class="flex gap-2 mt-2 md:mt-0">
+        <div class="flex gap-2 mt-2 xl:mt-0">
             <button id="lang-ti" onclick="setLanguage('ti')" class="px-3 py-1 border rounded bg-gray-100 text-gray-700 hover:bg-blue-100 transition">Ti</button>
             <button id="lang-nl" onclick="setLanguage('nl')" class="px-3 py-1 border rounded bg-blue-600 text-white hover:bg-blue-700 transition">NL</button>
         </div>
@@ -59,20 +69,24 @@
         <div class="max-w-4xl mx-auto">
             <div class="bg-white rounded-lg shadow-lg p-8 fade-in card-hover">
                 <p class="text-lg text-gray-700 leading-relaxed mb-6" data-translate="vision_content">
-                    Onze visie is om een bloeiende gemeenschap te zijn die Christus dient en anderen helpt om Hem te leren kennen.
+                    Onze visie is om een bloeiende Orthodoxe gemeenschap te zijn die geworteld is in de apostolische tradities, verenigd in geloof en liefde, en toegewijd aan de spirituele groei van al haar leden. Wij streven ernaar om een brug te zijn tussen onze Eritrese erfgoed en onze Nederlandse samenleving, terwijl we trouw blijven aan de leer van de Heilige Kerkvaders en de Orthodoxe geloofsbelijdenis.
                 </p>
                 <div class="space-y-6 mt-8">
                     <div class="border-l-4 border-blue-600 pl-6">
-                        <h3 class="text-xl font-bold mb-2 text-blue-700">Toekomstgericht</h3>
-                        <p class="text-gray-700">We streven ernaar om een kerk te zijn die relevant is voor toekomstige generaties.</p>
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Trouw aan de Traditie</h3>
+                        <p class="text-gray-700">Wij blijven trouw aan de apostolische tradities, de leer van de Kerkvaders en de Orthodoxe geloofsbelijdenis zoals die door de eeuwen heen is doorgegeven.</p>
                     </div>
                     <div class="border-l-4 border-blue-600 pl-6">
-                        <h3 class="text-xl font-bold mb-2 text-blue-700">Inclusief</h3>
-                        <p class="text-gray-700">Iedereen is welkom, ongeacht achtergrond of situatie.</p>
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Spirituele Groei</h3>
+                        <p class="text-gray-700">Wij streven ernaar om een gemeenschap te zijn waar elke gelovige kan groeien in geloof, kennis en spirituele volwassenheid door deelname aan de liturgie, gebed en gemeenschapsleven.</p>
                     </div>
                     <div class="border-l-4 border-blue-600 pl-6">
-                        <h3 class="text-xl font-bold mb-2 text-blue-700">Groeiend</h3>
-                        <p class="text-gray-700">We willen continu groeien in geloof, aantal en impact.</p>
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Culturele en Religieuze Identiteit</h3>
+                        <p class="text-gray-700">Wij behouden en vieren onze Eritrese culturele en religieuze identiteit terwijl we een brug vormen naar de bredere Nederlandse samenleving.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">Toekomstige Generaties</h3>
+                        <p class="text-gray-700">Wij zijn toegewijd aan het doorgeven van onze geloofstradities, taal en cultuur aan jongere generaties, zodat zij kunnen opgroeien met een sterke spirituele en culturele basis.</p>
                     </div>
                 </div>
             </div>

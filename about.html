@@ -10,36 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <!-- Force logo size consistency - inline to ensure it loads -->
+    <style>
+        /* Emergency override - ensure logo is same size everywhere */
+        html body nav a.logo-container img.logo-img {
+            transform: scale(1.6) !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="flex flex-wrap justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50">
-        <div class="flex items-center gap-3 mb-2 md:mb-0">
+        <div class="flex items-center gap-3 mb-2 xl:mb-0 mr-4 xl:mr-8">
             <a href="index.html" class="logo-container">
                 <img src="images/logo.png" alt="Abune Endrias Church Logo" class="logo-img" loading="eager">
             </a>
             <span class="font-bold text-xl text-blue-700" data-translate="church_name">Abune Endrias</span>
         </div>
         
-        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-blue-700">
+        <!-- Mobile/Tablet menu button (shows on screens smaller than xl/1280px) -->
+        <button id="mobile-menu-btn" class="xl:hidden text-gray-700 hover:text-blue-700">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
         
-        <ul id="nav-menu" class="hidden md:flex gap-6 items-center flex-wrap">
+        <!-- Navigation Links (hidden on mobile/tablet/iPad, shown on xl screens and up - 1280px+) -->
+        <ul id="nav-menu" class="hidden xl:flex gap-4 items-center">
             <li><a href="index.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_home">Home</a></li>
-            <li><a href="about.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_about">Over Ons</a></li>
-            <li><a href="mission.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_mission">Missie</a></li>
-            <li><a href="vision.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_vision">Visie</a></li>
-            <li><a href="yearbook.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_yearbook">Jaarboek</a></li>
             <li><a href="services.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_services">Diensten</a></li>
             <li><a href="church-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_church_leaders">Kerkleiders</a></li>
             <li><a href="sunday-school-leaders.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_sunday_school">Zondagsschool</a></li>
+            <li><a href="mission.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_mission">Missie</a></li>
+            <li><a href="vision.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_vision">Visie</a></li>
+            <li><a href="yearbook.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_yearbook">Jaarboek</a></li>
+            <li><a href="about.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_about">Over Ons</a></li>
             <li><a href="contact.html" class="text-gray-700 hover:text-blue-700 font-medium" data-translate="nav_contact">Contact</a></li>
         </ul>
         
-        <div class="flex gap-2 mt-2 md:mt-0">
+        <div class="flex gap-2 mt-2 xl:mt-0">
             <button id="lang-ti" onclick="setLanguage('ti')" class="px-3 py-1 border rounded bg-gray-100 text-gray-700 hover:bg-blue-100 transition">Ti</button>
             <button id="lang-nl" onclick="setLanguage('nl')" class="px-3 py-1 border rounded bg-blue-600 text-white hover:bg-blue-700 transition">NL</button>
         </div>
@@ -59,13 +69,16 @@
         <div class="max-w-4xl mx-auto">
             <div class="bg-white rounded-lg shadow-lg p-8 fade-in card-hover">
                 <p class="text-lg text-gray-700 leading-relaxed mb-6" data-translate="about_content">
-                    Onze kerk is een gemeenschap van christenen. We zijn toegewijd aan het dienen van Christus en het delen van het evangelie met anderen.
+                    De Eritrean Orthodox Tewahdo Kerk Abune Endrias is een gemeenschap van gelovigen die de apostolische tradities en de leer van de Kerkvaders volgt. Onze kerk behoort tot de Oriental Orthodoxe kerken en viert de goddelijke liturgie volgens de eeuwenoude tradities van de Ethiopische en Eritrese Orthodoxe Kerk. Wij zijn toegewijd aan het behouden van onze religieuze en culturele identiteit terwijl we een spirituele thuis bieden aan de Eritrese gemeenschap in Nederland.
                 </p>
                 <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    We geloven in de kracht van gemeenschap en het belang van samenkomen om te aanbidden, te leren en elkaar te ondersteunen in ons geloof.
+                    Onze kerk volgt de Orthodoxe geloofsleer zoals geformuleerd door de Oecumenische Concilies en de Heilige Kerkvaders. Wij geloven in de Heilige Drie-eenheid, de incarnatie van onze Heer Jezus Christus, en de goddelijke en menselijke natuur van Christus verenigd in één persoon zonder vermenging, zonder verandering, zonder scheiding en zonder scheiding.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Door de goddelijke liturgie, de sacramenten, gebed en gemeenschapsleven streven wij ernaar om dichter bij God te komen en elkaar te ondersteunen in ons spirituele pad. Onze kerk is een plaats waar de Eritrese gemeenschap samenkomt om te aanbidden, te leren, en onze rijke religieuze en culturele tradities te vieren.
                 </p>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Onze kerk is open voor iedereen die op zoek is naar een spirituele thuis en een plek om te groeien in geloof.
+                    Iedereen is welkom in onze gemeenschap, ongeacht achtergrond of situatie. Wij nodigen u uit om deel te nemen aan onze liturgische diensten en gemeenschapsactiviteiten.
                 </p>
             </div>
         </div>

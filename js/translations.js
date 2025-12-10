@@ -2,64 +2,67 @@ const translations = {
   ti: {
     // Church Name
     church_name: "ኣቡነ እንድርያስ",
-    
+
     // Navigation
-    nav_home: "መኣዲ",
-    nav_about: "ብዛዕባና",
-    nav_mission: "ትምኒት",
+    nav_home: "ቅድመ ገጽ",
+    nav_about: "ብዛዕባ ቤተክርስትያን",
+    nav_mission: "ተልእኮና",
     nav_vision: "ራእይ",
     nav_yearbook: "ዓመታዊ መጽሓፍ",
     nav_services: "ኣገልግሎት",
-    nav_church_leaders: "ኣመሓዳሪ ቤተ ክርስትያን",
-    nav_sunday_school: "ኣመሓዳሪ ትምህርቲ እሑድ",
-    nav_contact: "ያኣካና",
-    
+    nav_church_leaders: "ኣመሓደርቲ ቤተ ክርስትያን",
+    nav_sunday_school: "ኣመሓደርቲ ትምህርቲ ሰንበት",
+    nav_contact: "ርኸቡና",
+
     // Home Page
     home_title: "እንኳዕ ብደሓን መጻእኩም",
-    home_subtitle: "ናብ ቤተ ክርስትያንና እንኳዕ ብደሓን መጻእኩም",
+    home_subtitle: "ቤተ ክርስትያንና ደብረ ጽጌ ኣቡነ እንድርያስ",
     home_welcome: "እንኳዕ ብደሓን መጻእኩም",
-    home_description: "እዚ ናይ እና ቤተ ክርስትያን መርበብ ሓበሬታ እዩ። ኣብዚ ንምህላውና፣ ትምኒትና፣ ራእይና፣ ኣመሓዳሪና፣ ኣገልግሎትና ከምኡውን ካልኦት ሓበሬታታት ክትረኽቡ ትኽእሉ።",
-    
+    home_description: "ናብ ኤርትራዊት ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ኣቡነ እንድርያስ እንኳዕ ብደሓን መጻእኩም።",
+
     // About Page
     about_title: "ብዛዕባና",
     about_subtitle: "ብዛዕባ ቤተ ክርስትያንና",
-    about_content: "ቤተ ክርስትያንና ንምህላው ክርስትያናውያን ማሕበር እያ። ንዓይነት ምህላውና ንምስላሕ ኣብ ክርስትያን እናዓደልና ንነገር ንምህላው ንምስላሕ ንምህላው ንምስላሕ ንምህላው ንምስላሕ።",
-    
+    about_content: "ኤርትራዊት ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ኣቡነ እንድርያስ ነቲ ሃዋርያዊ ትምህርትን ናይ ኣቦታት ቤተ ክርስትያን ትምህርትን ዝስዕብ ክርስትያናውያን ማሕበር እያ። ኤርትራዊት ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ኣቡነ እንድርያስ ነቲ ሃዋርያዊ ትምህርትን ናይ ኣቦታት ቤተ ክርስትያን ትምህርትን ዝስዕብ ክርስትያናውያን ማሕበር እያ። ኤርትራዊት ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ኣቡነ እንድርያስ ነቲ ሃዋርያዊ ትምህርትን ናይ ኣቦታት ቤተ ክርስትያን ትምህርትን ዝስዕብ ክርስትያናውያን ማሕበር እያ። ኤርትራዊት ኦርቶዶክስ ተዋህዶ ቤተ ክርስትያን ኣቡነ እንድርያስ ነቲ ሃዋርያዊ ትምህርትን ናይ ኣቦታት ቤተ ክርስትያን ትምህርትን ዝስዕብ ክርስትያናውያን ማሕበር እያ።",
+    about_card_content: "ነቲ ናይ ኦርቶዶክስ ቤተ ክርስትያን ኣርኣያዊ ትምህርትን ስርዓትን ዝሓድሕድ ማሕበር።",
+
     // Mission Page
     mission_title: "ትምኒት",
     mission_subtitle: "ትምኒትና",
-    mission_content: "ትምኒትና ንክርስትያን ንምስላሕ ንምህላው ንምስላሕ ንምህላው ንምስላሕ ንምህላው ንምስላሕ።",
-    
+    mission_content: "ተልእኮና፡ ናይ ኦርቶዶክሳዊ ትምህርቲ እምነት ምስፋሕን ምዕቃብን፡ ነቲ መለኮታዊ ቅዳሴ ምብዓል፡ ከምኡውን ነቶም ናይ ኤርትራ ኦርቶዶክስ ባህልታት ንመጻኢ ወለዶታት ምምሕልላፍ። ብጸሎት፡ ብስግደት፡ ብኣገልግሎትን መንግስቲ እግዚአብሔር ኣብ ማሕበረሰብና ንምህናጽ ንጽዕር።",
+    mission_card_content: "ኦርቶዶክስ ሃይማኖት ንምሕባርን ኤርትራዊ ትምህርት ንምሓድሕድን።",
+
     // Vision Page
     vision_title: "ራእይ",
     vision_subtitle: "ራእይና",
-    vision_content: "ራእይና ንክርስትያን ንምስላሕ ንምህላው ንምስላሕ ንምህላው ንምስላሕ ንምህላው ንምስላሕ።",
-    
+    vision_content: "ራእይና፡ ኣብቲ ሐዋርያዊ ባህልታት ሱር ዝሰደደት፡ ኣብ እምነትን ፍቕርን እተሓሓዘት፡ ከምኡውን ንመንፈሳዊ ዕብየት ኩሎም ኣባላታ እተወፈየት ዅርንዒት ዘላታ ኦርቶዶክሳዊት ማሕበረሰብ ምዃን እዩ። ንትምህርቲ ቅዱሳን ኣቦታት ቤተክርስትያንን ናይ ኦርቶዶክሳዊ መግለጺ እምነትን ተኣማንነት እንከላ፡ ኣብ መንጎ ናይ ኤርትራ ውርሻናን ናይ ሆላንድ ሕብረተሰብናን ድልድል ንምዃን ንጽዕር።",
+    vision_card_content: "ኣብ ሃዋርያዊ ትምህርት ዝተሰረተ...",
+
     // Yearbook Page
     yearbook_title: "ዓመታዊ መጽሓፍ",
     yearbook_subtitle: "ዓመታዊ መጽሓፍ",
     yearbook_year: "ዓመት",
     yearbook_activities: "ኣገልግሎታት",
-    
+
     // Services Page
     services_title: "ኣገልግሎት",
-    services_subtitle: "ወርሓዊ ኣገልግሎት",
+    services_subtitle: "ሰሙናዊ ኣገልግሎት",
     services_day: "ዕለት",
     services_activity: "ኣገልግሎት",
     services_time: "ሰዓት",
-    services_responsible: "ኣለላዊ",
-    
+    services_responsible: "መራሒ ኣገልግሎት",
+
     // Church Leaders Page
-    church_leaders_title: "ኣመሓዳሪ ቤተ ክርስትያን",
-    church_leaders_subtitle: "ኣመሓዳሪ ቤተ ክርስትያን",
-    
+    church_leaders_title: "ኣመሓደርቲ ቤተ ክርስትያን",
+    church_leaders_subtitle: "ኣመሓደርቲ ቤተ ክርስትያን",
+
     // Sunday School Leaders Page
-    sunday_school_title: "ኣመሓዳሪ ትምህርቲ እሑድ",
-    sunday_school_subtitle: "ኣመሓዳሪ ትምህርቲ እሑድ",
-    
+    sunday_school_title: "ኣመሓደርቲ ትምህርቲ ሰንበት",
+    sunday_school_subtitle: "ጠርነፍቲ ክፍልታት ትምህርቲ ሰንበት",
+
     // Contact Page
-    contact_title: "ያኣካና",
-    contact_subtitle: "ናብና ተራኺቡና",
+    contact_title: "ርኸቡና",
+    contact_subtitle: "መልእኽቲ ስደዱ",
     contact_name: "ስም",
     contact_email: "ኢመይል",
     contact_message: "መልእኽቲ",
@@ -70,41 +73,41 @@ const translations = {
     contact_wednesday: "ኣርብዓ",
     contact_friday: "ዓርቢ",
     contact_saturday: "ቀዳም",
-    
+
     // Leader names and roles (Church Leaders - 5)
-    leader1_name: "ኣቶ ስም ኣቦ",
-    leader1_role: "ኣቦ ቤተ ክርስትያን",
-    leader2_name: "ኣቶ ስም ካልእ",
-    leader2_role: "ንእሽቶ ኣቦ",
-    leader3_name: "ኣቶ ስም ሳልሳይ",
-    leader3_role: "ኣለላዊ",
-    leader4_name: "ኣቶ ስም ራብዓይ",
-    leader4_role: "ኣለላዊ",
-    leader5_name: "ኣቶ ስም ሓምሻይ",
-    leader5_role: "ኣለላዊ",
-    
+    leader1_name: "ምሉእ ስም",
+    leader1_role: "ተልእኾ",
+    leader2_name: "ምሉእ ስም",
+    leader2_role: "ተልእኾ",
+    leader3_name: "ምሉእ ስም",
+    leader3_role: "ተልእኾ",
+    leader4_name: "ምሉእ ስም",
+    leader4_role: "ተልእኾ",
+    leader5_name: "ምሉእ ስም",
+    leader5_role: "ተልእኾ",
+
     // Leader names and roles (Sunday School - 8)
-    ss_leader1_name: "ኣቶ ስም ኣቦ",
-    ss_leader1_role: "ኣለላዊ ትምህርቲ",
-    ss_leader2_name: "ኣቶ ስም ካልእ",
-    ss_leader2_role: "ኣለላዊ ትምህርቲ",
-    ss_leader3_name: "ኣቶ ስም ሳልሳይ",
-    ss_leader3_role: "ኣለላዊ ትምህርቲ",
-    ss_leader4_name: "ኣቶ ስም ራብዓይ",
-    ss_leader4_role: "ኣለላዊ ትምህርቲ",
-    ss_leader5_name: "ኣቶ ስም ሓምሻይ",
-    ss_leader5_role: "ኣለላዊ ትምህርቲ",
-    ss_leader6_name: "ኣቶ ስም ሻድሻይ",
-    ss_leader6_role: "ኣለላዊ ትምህርቲ",
-    ss_leader7_name: "ኣቶ ስም ሻውዓይ",
-    ss_leader7_role: "ኣለላዊ ትምህርቲ",
-    ss_leader8_name: "ኣቶ ስም ሻምናይ",
-    ss_leader8_role: "ኣለላዊ ትምህርቲ",
+    ss_leader1_name: "ምሉእ ስም",
+    ss_leader1_role: "ኣቦ ወንበር",
+    ss_leader2_name: "ምሉእ ስም",
+    ss_leader2_role: "ክፍሊ ትምህርቲ",
+    ss_leader3_name: "ምሉእ ስም",
+    ss_leader3_role: "ክፍሊ ጉዳይ ኣባላት",
+    ss_leader4_name: "ምሉእ ስም",
+    ss_leader4_role: "ክፍሊ ርክባት",
+    ss_leader5_name: "ምሉእ ስም",
+    ss_leader5_role: "ክፍሊ ስነ-ጥበብ",
+    ss_leader6_name: "ምሉእ ስም",
+    ss_leader6_role: "ክፍሊ ንብረት/ገንዘብ",
+    ss_leader7_name: "ምሉእ ስም",
+    ss_leader7_role: "ክፍሊ መዝሙር",
+    ss_leader8_name: "ምሉእ ስም",
+    ss_leader8_role: "ክፍሊ ልምዓት",
   },
   nl: {
     // Church Name
     church_name: "Abune Endrias",
-    
+
     // Navigation
     nav_home: "Home",
     nav_about: "Over Ons",
@@ -115,34 +118,37 @@ const translations = {
     nav_church_leaders: "Kerkleiders",
     nav_sunday_school: "Zondagsschool Leiders",
     nav_contact: "Contact",
-    
+
     // Home Page
     home_title: "Welkom",
     home_subtitle: "Welkom bij onze kerk",
     home_welcome: "Welkom",
-    home_description: "Dit is de website van onze kerk. Hier kunt u informatie vinden over ons, onze missie, visie, leiders, diensten en andere informatie.",
-    
+    home_description: "Welkom bij de Eritrean Orthodox Tewahdo Kerk Abune Endrias. Wij zijn een gemeenschap die de eeuwenoude tradities van de Orthodoxe Kerk bewaart en viert. Hier vindt u informatie over onze liturgische diensten, gemeenschapsactiviteiten, leiders en de rijke geschiedenis van onze kerk.",
+
     // About Page
     about_title: "Over Ons",
     about_subtitle: "Over onze kerk",
-    about_content: "Onze kerk is een gemeenschap van christenen. We zijn toegewijd aan het dienen van Christus en het delen van het evangelie met anderen.",
-    
+    about_content: "De Eritrean Orthodox Tewahdo Kerk Abune Endrias is een gemeenschap van gelovigen die de apostolische tradities en de leer van de Kerkvaders volgt. Onze kerk behoort tot de Oriental Orthodoxe kerken en viert de goddelijke liturgie volgens de eeuwenoude tradities van de Ethiopische en Eritrese Orthodoxe Kerk. Wij zijn toegewijd aan het behouden van onze religieuze en culturele identiteit terwijl we een spirituele thuis bieden aan de Eritrese gemeenschap in Nederland.",
+    about_card_content: "Een gemeenschap die de eeuwenoude tradities van de Orthodoxe Kerk bewaart en viert.",
+
     // Mission Page
     mission_title: "Missie",
     mission_subtitle: "Onze missie",
-    mission_content: "Onze missie is om Christus te dienen en het evangelie te delen met anderen in onze gemeenschap en daarbuiten.",
-    
+    mission_content: "Onze missie is om de Orthodoxe geloofsleer te verkondigen, de goddelijke liturgie te vieren, en een spirituele gemeenschap te vormen die de Eritrese Orthodoxe tradities bewaart en doorgeeft aan toekomstige generaties. Wij streven ernaar om door gebed, aanbidding en dienstbetoon het Koninkrijk Gods te bouwen in onze gemeenschap.",
+    mission_card_content: "De Orthodoxe geloofsleer verkondigen en de Eritrese tradities bewaren.",
+
     // Vision Page
     vision_title: "Visie",
     vision_subtitle: "Onze visie",
-    vision_content: "Onze visie is om een bloeiende gemeenschap te zijn die Christus dient en anderen helpt om Hem te leren kennen.",
-    
+    vision_content: "Onze visie is om een bloeiende Orthodoxe gemeenschap te zijn die geworteld is in de apostolische tradities, verenigd in geloof en liefde, en toegewijd aan de spirituele groei van al haar leden. Wij streven ernaar om een brug te zijn tussen onze Eritrese erfgoed en onze Nederlandse samenleving, terwijl we trouw blijven aan de leer van de Heilige Kerkvaders en de Orthodoxe geloofsbelijdenis.",
+    vision_card_content: "Een bloeiende gemeenschap geworteld in apostolische tradities.",
+
     // Yearbook Page
     yearbook_title: "Jaarboek",
     yearbook_subtitle: "Jaarboek",
     yearbook_year: "Jaar",
     yearbook_activities: "Activiteiten",
-    
+
     // Services Page
     services_title: "Diensten",
     services_subtitle: "Maandelijkse diensten",
@@ -150,15 +156,15 @@ const translations = {
     services_activity: "Activiteit",
     services_time: "Tijd",
     services_responsible: "Verantwoordelijke",
-    
+
     // Church Leaders Page
     church_leaders_title: "Kerkleiders",
     church_leaders_subtitle: "Kerkleiders",
-    
+
     // Sunday School Leaders Page
     sunday_school_title: "Zondagsschool Leiders",
     sunday_school_subtitle: "Zondagsschool Leiders",
-    
+
     // Contact Page
     contact_title: "Contact",
     contact_subtitle: "Neem contact met ons op",
@@ -172,7 +178,7 @@ const translations = {
     contact_wednesday: "Woensdag",
     contact_friday: "Vrijdag",
     contact_saturday: "Zaterdag",
-    
+
     // Leader names and roles (Church Leaders - 5)
     leader1_name: "Dhr. Naam Eén",
     leader1_role: "Pastor",
@@ -184,7 +190,7 @@ const translations = {
     leader4_role: "Ouderling",
     leader5_name: "Dhr. Naam Vijf",
     leader5_role: "Diaken",
-    
+
     // Leader names and roles (Sunday School - 8)
     ss_leader1_name: "Dhr. Naam Eén",
     ss_leader1_role: "Zondagsschool Leraar",
