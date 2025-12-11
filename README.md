@@ -1,4 +1,4 @@
-# Church Website - Bilingual (Tigrinya & Dutch)
+# Church Website - Bilingual (Tigrinya & Dutch) 
 
 A complete, fully responsive church website built with HTML, Tailwind CSS, and vanilla JavaScript, featuring bilingual support for Tigrinya (ti) and Dutch (nl).
 
