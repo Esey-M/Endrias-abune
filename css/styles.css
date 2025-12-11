@@ -260,6 +260,26 @@ html {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--gray-100);
+    z-index: 1030;
+}
+
+/* Ensure offcanvas backdrop covers everything */
+.offcanvas-backdrop {
+    z-index: 1040 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Ensure hero section doesn't override offcanvas */
+.hero-section {
+    z-index: 1;
+}
+
+.page-header {
+    z-index: 1;
 }
 
 /* Navbar brand */
@@ -370,55 +390,137 @@ html {
     border-left: 1px solid var(--gray-200);
 }
 
-/* Mobile menu (offcanvas) styling */
-.offcanvas {
-    max-width: 300px;
-    border-left: 1px solid var(--gray-200);
+/* =============================================
+   OFFCANVAS - Mobile/Tablet (below xxl)
+   ============================================= */
+@media (max-width: 1399.98px) {
+    .offcanvas {
+        max-width: 300px;
+        border-left: 1px solid var(--gray-200);
+        height: 100vh !important;
+        height: 100dvh !important;
+    }
+    
+    /* Ensure offcanvas has proper z-index */
+    .offcanvas.show,
+    .offcanvas.showing {
+        z-index: 1045 !important;
+    }
+    
+    /* Ensure offcanvas body is scrollable and fills available space */
+    .offcanvas .offcanvas-body {
+        flex: 1;
+        overflow-y: auto;
+    }
 }
 
-.offcanvas-header {
-    background-color: var(--blue-600);
-    color: white;
-    padding: 1.25rem 1.5rem;
+/* =============================================
+   NAVBAR - Desktop (xxl and above)
+   ============================================= */
+@media (min-width: 1400px) {
+    /* Make offcanvas display inline within navbar on desktop */
+    .navbar-expand-xxl .offcanvas {
+        position: static !important;
+        z-index: auto !important;
+        flex-grow: 1;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        visibility: visible !important;
+        background-color: transparent !important;
+        border: 0 !important;
+        transform: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Hide offcanvas header on desktop */
+    .navbar-expand-xxl .offcanvas .offcanvas-header {
+        display: none !important;
+    }
+    
+    /* Make offcanvas body display inline */
+    .navbar-expand-xxl .offcanvas .offcanvas-body {
+        display: flex !important;
+        flex-grow: 0;
+        padding: 0 !important;
+        overflow-y: visible !important;
+        align-items: center;
+    }
+    
+    /* Hide hamburger menu on desktop */
+    .navbar-expand-xxl .navbar-toggler {
+        display: none !important;
+    }
+    
+    /* Hide mobile language switcher on desktop */
+    .navbar-expand-xxl .lang-switcher-mobile {
+        display: none !important;
+    }
 }
 
-.offcanvas-title {
-    color: white;
-    font-weight: 600;
+/* Offcanvas header styling (mobile only) */
+@media (max-width: 1399.98px) {
+    .offcanvas-header {
+        background-color: var(--blue-600);
+        color: white;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .offcanvas-title {
+        color: white;
+        font-weight: 600;
+    }
+
+    .offcanvas .btn-close {
+        filter: brightness(0) invert(1);
+        opacity: 0.8;
+    }
+
+    .offcanvas .btn-close:hover {
+        opacity: 1;
+    }
+
+    .offcanvas-body {
+        padding: 1rem;
+    }
+
+    .offcanvas .nav-link {
+        padding: 0.875rem 1rem !important;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.25rem;
+        color: var(--gray-700) !important;
+        display: block !important;
+    }
+
+    .offcanvas .nav-link:hover {
+        background-color: var(--gray-100);
+        color: var(--blue-600) !important;
+    }
+
+    .offcanvas .nav-link.active,
+    .offcanvas .nav-link.nav-active {
+        background-color: var(--blue-50);
+        color: var(--blue-600) !important;
+    }
+
+    /* Ensure nav menu is visible in offcanvas */
+    .offcanvas .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-left: 0 !important;
+        margin-bottom: 1rem !important;
+        list-style: none !important;
+    }
 }
 
-.offcanvas .btn-close {
-    filter: brightness(0) invert(1);
-    opacity: 0.8;
-}
-
-.offcanvas .btn-close:hover {
-    opacity: 1;
-}
-
-.offcanvas-body {
-    padding: 1rem;
-}
-
-.offcanvas .nav-link {
-    padding: 0.875rem 1rem !important;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 0.25rem;
-}
-
-.offcanvas .nav-link:hover {
-    background-color: var(--gray-100);
-}
-
-.offcanvas .nav-link.active,
-.offcanvas .nav-link.nav-active {
-    background-color: var(--blue-50);
-    color: var(--blue-600) !important;
+.offcanvas .nav-item {
+    display: block !important;
 }
 
 /* Mobile language switcher in offcanvas */
-.offcanvas .lang-switcher-mobile {
+.lang-switcher-mobile {
     display: flex;
     gap: 0.75rem;
     padding: 1rem;
@@ -427,7 +529,7 @@ html {
     justify-content: center;
 }
 
-.offcanvas .lang-btn {
+.lang-switcher-mobile .lang-btn {
     flex: 1;
     max-width: 100px;
     padding: 0.625rem 1rem;
