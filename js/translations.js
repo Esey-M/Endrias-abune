@@ -6,7 +6,7 @@ const translations = {
     // Navigation
     nav_home: "ቅድመ ገጽ",
     nav_about: "ብዛዕባ ቤተክርስትያን",
-    nav_mission: "ተልእኮና",
+    nav_mission: "ተልእኾና",
     nav_vision: "ራእይ",
     nav_yearbook: "ዓመታዊ መጽሓፍ",
     nav_services: "ኣገልግሎት",
@@ -27,9 +27,9 @@ const translations = {
     about_card_content: "ነቲ ናይ ኦርቶዶክስ ቤተ ክርስትያን ኣርኣያዊ ትምህርትን ስርዓትን ዝሓድሕድ ማሕበር።",
 
     // Mission Page
-    mission_title: "ትምኒት",
-    mission_subtitle: "ትምኒትና",
-    mission_content: "ተልእኮና፡ ናይ ኦርቶዶክሳዊ ትምህርቲ እምነት ምስፋሕን ምዕቃብን፡ ነቲ መለኮታዊ ቅዳሴ ምብዓል፡ ከምኡውን ነቶም ናይ ኤርትራ ኦርቶዶክስ ባህልታት ንመጻኢ ወለዶታት ምምሕልላፍ። ብጸሎት፡ ብስግደት፡ ብኣገልግሎትን መንግስቲ እግዚአብሔር ኣብ ማሕበረሰብና ንምህናጽ ንጽዕር።",
+    mission_title: "ተልእኾ",
+    mission_subtitle: "ተልእኾና",
+    mission_content: "ተልእኾና፡ ናይ ኦርቶዶክሳዊ ትምህርቲ እምነት ምስፋሕን ምዕቃብን፡ ነቲ መለኮታዊ ቅዳሴ ምብዓል፡ ከምኡውን ነቶም ናይ ኤርትራ ኦርቶዶክስ ባህልታት ንመጻኢ ወለዶታት ምምሕልላፍ። ብጸሎት፡ ብስግደት፡ ብኣገልግሎትን መንግስቲ እግዚአብሔር ኣብ ማሕበረሰብና ንምህናጽ ንጽዕር።",
     mission_card_content: "ኦርቶዶክስ ሃይማኖት ንምሕባርን ኤርትራዊ ትምህርት ንምሓድሕድን።",
 
     // Vision Page
@@ -39,8 +39,8 @@ const translations = {
     vision_card_content: "ኣብ ሃዋርያዊ ትምህርት ዝተሰረተ...",
 
     // Yearbook Page
-    yearbook_title: "ዓመታዊ መጽሓፍ",
-    yearbook_subtitle: "ዓመታዊ መጽሓፍ",
+    yearbook_title: "ዓመታዊ ጸብጻብ",
+    yearbook_subtitle: "ዓመታዊ ጸብጻብ",
     yearbook_year: "ዓመት",
     yearbook_activities: "ኣገልግሎታት",
 
@@ -121,7 +121,7 @@ const translations = {
 
     // Home Page
     home_title: "Welkom",
-    home_subtitle: "Welkom bij onze kerk",
+    home_subtitle: "Welkom bij Abune Endrias kerk",
     home_welcome: "Welkom",
     home_description: "Welkom bij de Eritrean Orthodox Tewahdo Kerk Abune Endrias. Wij zijn een gemeenschap die de eeuwenoude tradities van de Orthodoxe Kerk bewaart en viert. Hier vindt u informatie over onze liturgische diensten, gemeenschapsactiviteiten, leiders en de rijke geschiedenis van onze kerk.",
 
