@@ -57,6 +57,29 @@ function initOffcanvasNavigation() {
     const offcanvasElement = document.getElementById('navbarOffcanvas');
     if (!offcanvasElement) return;
     
+    // Force right positioning function - runs aggressively
+    const forceRightPosition = () => {
+        if (window.innerWidth < 1400) { // Only on mobile
+            // Use requestAnimationFrame to ensure it runs after Bootstrap's positioning
+            requestAnimationFrame(() => {
+                offcanvasElement.style.setProperty('right', '0', 'important');
+                offcanvasElement.style.setProperty('left', 'auto', 'important');
+                offcanvasElement.style.setProperty('margin-left', '0', 'important');
+                offcanvasElement.style.setProperty('padding-left', '0', 'important');
+                
+                // Also check computed style and force if needed
+                const computedLeft = window.getComputedStyle(offcanvasElement).left;
+                if (computedLeft !== 'auto' && computedLeft !== '0px') {
+                    // Force via transform if needed
+                    const currentTransform = window.getComputedStyle(offcanvasElement).transform;
+                    if (currentTransform === 'none' || !currentTransform.includes('translateX(0)')) {
+                        offcanvasElement.style.setProperty('transform', 'translateX(0)', 'important');
+                    }
+                }
+            });
+        }
+    };
+    
     // Get the Bootstrap offcanvas instance
     const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
     
@@ -67,6 +90,53 @@ function initOffcanvasNavigation() {
             offcanvas.hide();
         });
     });
+    
+    // Prevent body overflow when offcanvas is open
+    offcanvasElement.addEventListener('show.bs.offcanvas', () => {
+        document.body.classList.add('offcanvas-open');
+        forceRightPosition();
+        // Also force after a small delay to override Bootstrap
+        setTimeout(forceRightPosition, 10);
+        setTimeout(forceRightPosition, 50);
+    });
+    
+    offcanvasElement.addEventListener('hide.bs.offcanvas', () => {
+        document.body.classList.remove('offcanvas-open');
+    });
+    
+    // Also handle when offcanvas is fully shown/hidden
+    offcanvasElement.addEventListener('shown.bs.offcanvas', () => {
+        document.body.classList.add('offcanvas-open');
+        forceRightPosition();
+        // Force multiple times to ensure it sticks
+        setTimeout(forceRightPosition, 10);
+        setTimeout(forceRightPosition, 50);
+        setTimeout(forceRightPosition, 100);
+    });
+    
+    offcanvasElement.addEventListener('hidden.bs.offcanvas', () => {
+        document.body.classList.remove('offcanvas-open');
+    });
+    
+    // Use MutationObserver to watch for style changes
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                forceRightPosition();
+            }
+        });
+    });
+    
+    observer.observe(offcanvasElement, {
+        attributes: true,
+        attributeFilter: ['style', 'class']
+    });
+    
+    // Force position on load
+    forceRightPosition();
+    
+    // Also force on window resize
+    window.addEventListener('resize', forceRightPosition);
 }
 
 // Sync language button states between desktop and mobile
