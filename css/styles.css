@@ -271,6 +271,14 @@ html {
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+/* Prevent horizontal scrolling when offcanvas is open (mobile only) */
+@media (max-width: 1399.98px) {
+    body.offcanvas-open {
+        overflow-x: hidden;
+    }
 }
 
 /* Ensure hero section doesn't override offcanvas */
@@ -401,6 +409,26 @@ html {
         height: 100dvh !important;
     }
     
+    /* Force offcanvas-end to open from right - override Bootstrap completely */
+    .offcanvas.offcanvas-end {
+        right: 0 !important;
+        left: auto !important;
+        /* Remove any left offset Bootstrap might add */
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        /* Ensure it starts off-screen to the right */
+        transform: translateX(100%) !important;
+    }
+    
+    /* When shown, ensure it stays on the right and slides in correctly */
+    .offcanvas.offcanvas-end.show,
+    .offcanvas.offcanvas-end.showing {
+        right: 0 !important;
+        left: auto !important;
+        transform: translateX(0) !important;
+        margin-left: 0 !important;
+    }
+    
     /* Ensure offcanvas has proper z-index */
     .offcanvas.show,
     .offcanvas.showing {
@@ -411,6 +439,7 @@ html {
     .offcanvas .offcanvas-body {
         flex: 1;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
@@ -465,16 +494,29 @@ html {
         background-color: var(--blue-600);
         color: white;
         padding: 1.25rem 1.5rem;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
     }
 
     .offcanvas-title {
         color: white;
         font-weight: 600;
+        margin: 0;
+        padding-right: 1rem;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .offcanvas .btn-close {
         filter: brightness(0) invert(1);
         opacity: 0.8;
+        flex-shrink: 0;
+        margin-left: auto;
     }
 
     .offcanvas .btn-close:hover {
@@ -482,16 +524,19 @@ html {
     }
 
     .offcanvas-body {
-        padding: 1rem;
+        padding: 1.5rem;
+        overflow-x: hidden;
     }
 
     .offcanvas .nav-link {
-        padding: 0.875rem 1rem !important;
+        padding: 0.875rem 1.25rem !important;
         font-size: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 0.25rem;
         color: var(--gray-700) !important;
         display: block !important;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .offcanvas .nav-link:hover {
@@ -512,7 +557,13 @@ html {
         padding-left: 0 !important;
         margin-bottom: 1rem !important;
         list-style: none !important;
+        width: 100%;
     }
+}
+
+/* Prevent body overflow when offcanvas is open */
+body:has(.offcanvas.show) {
+    overflow-x: hidden;
 }
 
 .offcanvas .nav-item {
