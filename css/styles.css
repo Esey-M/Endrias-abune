@@ -1058,29 +1058,92 @@ body:has(.offcanvas.show) {
 }
 
 /* ============================================
-   LEADER CARDS - Circle avatars
+   LEADER CARDS - Professional styling
    ============================================ */
 
+.leader-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15), 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
 .leader-avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid var(--blue-100);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.leader-card:hover .leader-avatar {
+    border-color: var(--blue-400);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+    transform: scale(1.03);
+}
+
+.leader-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.leader-card:hover .leader-avatar img {
+    transform: scale(1.08);
+}
+
+.leader-name {
+    color: var(--gray-900);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.leader-role {
+    color: var(--blue-600);
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--blue-50);
+    border-radius: 2rem;
+}
+
+.leader-divider {
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(to right, var(--blue-400), var(--blue-600));
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+/* Sunday school smaller cards */
+.leader-avatar-sm {
     width: 8rem;
     height: 8rem;
-    background-color: var(--blue-100);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
 }
 
-.leader-avatar:hover {
-    transform: scale(1.05);
+.leader-avatar-sm + .leader-name {
+    font-size: 1rem;
 }
 
-.leader-avatar svg {
-    width: 4rem;
-    height: 4rem;
-    color: var(--blue-600);
+@media (max-width: 767.98px) {
+    .leader-avatar {
+        width: 8rem;
+        height: 8rem;
+    }
 }
 
 /* ============================================
