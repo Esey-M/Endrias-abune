@@ -231,7 +231,7 @@ const translations = {
     leader4_name: "Hiwet Hailemariam",
     leader4_role: "Penningmeester",
     leader5_name: "Yonas Keleab",
-    leader5_role: "coördinator",
+    leader5_role: "tussenpersoon",
 
     // Leader names and roles (Sunday School - 8)
 ss_leader1_name: "Diaken Fisehatsiyon",
