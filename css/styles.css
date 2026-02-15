@@ -61,8 +61,10 @@
    BASE STYLES
    ============================================ */
 
-/* Smooth transitions */
-* {
+/* Smooth transitions for fade-in elements */
+.fade-in,
+.fade-in-delay-1,
+.fade-in-delay-2 {
     transition: opacity 0.3s ease;
 }
 
@@ -1084,6 +1086,8 @@ body:has(.offcanvas.show) {
     border: 4px solid var(--blue-100);
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    isolation: isolate;
 }
 
 .leader-card:hover .leader-avatar {
@@ -1093,6 +1097,7 @@ body:has(.offcanvas.show) {
 }
 
 .leader-avatar img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
