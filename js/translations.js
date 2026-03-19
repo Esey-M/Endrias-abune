@@ -71,6 +71,8 @@ const translations = {
     feast_meskel_date: "27 መስከረም",
     feast_mariam: "በዓላት ቅድስቲ ድንግል ማርያም",
     feast_mariam_desc: "ብዙሕ ግዜ ኣብ ዓመት",
+    feast_abune_endrias: "ዓመታዊ ክብረ በዓል ኣቡነ እንድርያስ",
+    feast_abune_endrias_desc: "ኣብ ለካቲት (ዕለቱ ነፍሲ ወከፍ ዓመት ይቕየር)",
     services_feasts_contact: "+ ዓበይቲ በዓላት ኤርትራዊት ኦርቶዶክስ ተዋህዶ",
 
     // Church Leaders Page
@@ -102,7 +104,7 @@ const translations = {
     leader2_role: "ምኽትል ኣቦ ወንበር",
     leader3_name: "ዲያቆን ቢንያም ዮሴፍ",
     leader3_role: "ጸሓፊ",
-    leader4_name: "ሕይወት ሃይለማርያም",
+    leader4_name: "ሕይወት ተኽለማርያም",
     leader4_role: "ሓላፊ ገንዘብ",
     leader5_name: "ዮናስ ቃልኣብ",
     leader5_role: "ወኪል ቤት ትምህርቲ ሰንበት",
@@ -112,7 +114,7 @@ const translations = {
     ss_leader1_role: "ኣቦ ወንበር",
     ss_leader2_name: "ደጀን ኣስመሮም",
     ss_leader2_role: "ጠርናፊ ክፍሊ ትምህርቲ",
-    ss_leader3_name: "ዮናስ ቀለኣብ",
+    ss_leader3_name: "ዮናስ ቃልኣብ",
     ss_leader3_role: "ጠርናፊ ክፍሊ ጉዳይ ኣባላት",
     ss_leader4_name: "ሮቤል ምሉጌታ",
     ss_leader4_role: "ጠርናፊ ክፍሊ ርክባት",
@@ -197,6 +199,8 @@ const translations = {
     feast_meskel_date: "27 september",
     feast_mariam: "Feestdagen van de Heilige Maagd Maria",
     feast_mariam_desc: "Meerdere keren per jaar",
+    feast_abune_endrias: "Jaarlijks feest van Abune Endrias",
+    feast_abune_endrias_desc: "In februari (datum varieert jaarlijks)",
     services_feasts_contact: "+ grote Eritrees-Orthodoxe feestdagen",
 
     // Church Leaders Page
