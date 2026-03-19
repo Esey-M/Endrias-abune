@@ -141,7 +141,7 @@ function initOffcanvasNavigation() {
 
 // Sync language button states between desktop and mobile
 function syncLanguageButtons() {
-    const currentLang = localStorage.getItem('language') || 'nl';
+    const currentLang = localStorage.getItem('selectedLanguage') || 'nl';
     
     // Get all language buttons
     const tiButtons = document.querySelectorAll('[id^="lang-ti"]');

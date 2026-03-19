@@ -129,7 +129,7 @@ const translations = {
   },
   nl: {
     // Church Name
-    church_name: "Abune Endrias",
+    church_name: "Abune Endryas",
 
     // Navigation
     nav_home: "Home",
@@ -144,14 +144,14 @@ const translations = {
 
     // Home Page
     home_title: "Welkom",
-    home_subtitle: "Debre Tsige Abune Endrias",
+    home_subtitle: "Debre Tsige Abune Endryas",
     home_welcome: "Welkom",
-    home_description: "Welkom bij de Eritrees-Orthodoxe Tewahdo Kerk Debre Tsige Abune Endrias. Wij zijn een gemeenschap die de eeuwenoude tradities van de Orthodoxe Kerk bewaart en viert. Hier vindt u informatie over onze liturgische diensten, gemeenschapsactiviteiten, leiders en onze kerk.",
+    home_description: "Welkom bij de Eritrees-Orthodoxe Tewahdo Kerk Debre Tsige Abune Endryas. Wij zijn een gemeenschap die de eeuwenoude tradities van de Orthodoxe Kerk bewaart en viert. Hier vindt u informatie over onze liturgische diensten, gemeenschapsactiviteiten, leiders en onze kerk.",
 
     // About Page
     about_title: "Over Ons",
     about_subtitle: "Over onze kerk",
-    about_content: "De Eritrees-Orthodoxe Tewahdo Kerk Debre Tsige Abune Endrias is een gemeenschap van gelovigen die de apostolische tradities en de leer van de Kerkvaders volgt. Onze kerk behoort tot de Oriëntaals-Orthodoxe kerken en viert de goddelijke liturgie volgens de eeuwenoude tradities van de Eritrees-Orthodoxe Tewahdo Kerk. Wij zijn toegewijd aan het behouden van onze religieuze en culturele identiteit terwijl we een spirituele thuis bieden aan de Eritrese gemeenschap in Nederland.",
+    about_content: "De Eritrees-Orthodoxe Tewahdo Kerk Debre Tsige Abune Endryas is een gemeenschap van gelovigen die de apostolische tradities en de leer van de Kerkvaders volgt. Onze kerk behoort tot de Oriëntaals-Orthodoxe kerken en viert de goddelijke liturgie volgens de eeuwenoude tradities van de Eritrees-Orthodoxe Tewahdo Kerk. Wij zijn toegewijd aan het behouden van onze religieuze en culturele identiteit terwijl we een spirituele thuis bieden aan de Eritrese gemeenschap in Nederland.",
     about_content2: "Onze kerk volgt de Orthodoxe geloofsleer zoals vastgesteld door de eerste drie Oecumenische Concilies en de Heilige Kerkvaders. Wij geloven in de Heilige Drie-eenheid en de incarnatie van onze Heer Jezus Christus. Het woord \"Tewahdo\" betekent \"eenheid\" en verwijst naar het geloof dat de goddelijke en menselijke natuur van Christus verenigd zijn in één natuur, zonder vermenging en zonder scheiding.",
     about_content3: "Door de goddelijke liturgie, de sacramenten, gebed en gemeenschapsleven streven wij ernaar om dichter bij God te komen en elkaar te ondersteunen in ons geestelijk leven. Onze kerk is een plaats waar de Eritrese gemeenschap samenkomt om te aanbidden, te leren, en onze rijke religieuze en culturele tradities te vieren.",
     about_content4: "Iedereen is welkom in onze gemeenschap. Wij nodigen u uit om deel te nemen aan onze liturgische diensten en gemeenschapsactiviteiten.",
@@ -199,7 +199,7 @@ const translations = {
     feast_meskel_date: "27 september",
     feast_mariam: "Feestdagen van de Heilige Maagd Maria",
     feast_mariam_desc: "Meerdere keren per jaar",
-    feast_abune_endrias: "Jaarlijks feest van Abune Endrias",
+    feast_abune_endrias: "Jaarlijks feest van Abune Endryas",
     feast_abune_endrias_desc: "In februari (datum varieert jaarlijks)",
     services_feasts_contact: "+ grote Eritrees-Orthodoxe feestdagen",
 
