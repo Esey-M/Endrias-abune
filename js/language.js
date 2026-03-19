@@ -40,6 +40,9 @@ function setLanguage(lang) {
 
 // Update all elements with data-translate attribute
 function updateTranslations() {
+  // Update the <html> lang attribute to match the current language
+  document.documentElement.lang = currentLanguage;
+
   const elements = document.querySelectorAll('[data-translate]');
   
   elements.forEach(element => {

@@ -97,6 +97,11 @@ const translations = {
     contact_friday: "ዓርቢ",
     contact_saturday: "ቀዳም",
 
+    // 404 Page
+    error_title: "ገጽ ኣይተረኽበን",
+    error_message: "እትደልይዎ ገጽ ኣይተረኽበን ወይ ተቐይሩ እዩ። ኣድራሻ ኣረጋግጹ ወይ ናብ ቅድመ ገጽ ተመለሱ።",
+    error_home_button: "ናብ ቅድመ ገጽ ተመለስ",
+
     // Leader names and roles (Church Leaders - 5)
     leader1_name: "መ/ም ቀሲስ ምሕረተኣብ",
     leader1_role: "ኣቦ ወንበር",
@@ -224,6 +229,11 @@ const translations = {
     contact_wednesday: "Woensdag",
     contact_friday: "Vrijdag",
     contact_saturday: "Zaterdag",
+
+    // 404 Page
+    error_title: "Pagina niet gevonden",
+    error_message: "De pagina die u zoekt bestaat niet of is verplaatst. Controleer het adres of ga terug naar de startpagina.",
+    error_home_button: "Terug naar Home",
 
     // Leader names and roles (Church Leaders - 5)
     leader1_name: "Priester Mhreteab Gebrekidan",

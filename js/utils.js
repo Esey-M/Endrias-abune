@@ -168,6 +168,17 @@ function syncLanguageButtons() {
     });
 }
 
+// Toggle accordion sections (used on yearbook page)
+function toggleAccordion(yearId) {
+    const content = document.getElementById(yearId);
+    const icon = document.getElementById('icon' + yearId.replace('year', ''));
+
+    content.classList.toggle('open');
+    if (icon) {
+        icon.classList.toggle('rotate-180');
+    }
+}
+
 // Initialize all utilities when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     setActiveNavLink();
