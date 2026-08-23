@@ -1,159 +1,227 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact us">
-    <meta property="og:title" content="Contact">
-    <meta property="og:description" content="Neem contact op met Abune Endryas Kerk in Den Haag - adres, telefoonnummer en contactformulier">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.abuneendryashaaglanden.org/contact.html">
-    <meta property="og:site_name" content="Abune Endryas">
-    <meta property="og:locale" content="nl_NL">
-    <title data-translate="contact_title">Contact</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/logo.css">
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-xxl navbar-light bg-white sticky-top">
-        <div class="container">
-            <a href="index.html" class="navbar-brand d-flex align-items-center gap-2">
-                <span class="logo-container">
-                    <img src="images/logo.png" alt="Abune Endryas Church Logo" class="logo-img" loading="eager">
-                </span>
-                <span class="fw-bold text-blue-700" data-translate="church_name">Abune Endryas</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel" data-translate="church_name">Abune Endryas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav ms-auto mb-2 mb-xxl-0" id="nav-menu">
-                        <li class="nav-item"><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
-                        <li class="nav-item"><a href="services.html" class="nav-link" data-translate="nav_services">Diensten</a></li>
-                        <li class="nav-item"><a href="church-leaders.html" class="nav-link" data-translate="nav_church_leaders">Kerkleiders</a></li>
-                        <li class="nav-item"><a href="sunday-school-leaders.html" class="nav-link" data-translate="nav_sunday_school">Zondagsschool</a></li>
-                        <li class="nav-item"><a href="mission.html" class="nav-link" data-translate="nav_mission">Missie</a></li>
-                        <li class="nav-item"><a href="vision.html" class="nav-link" data-translate="nav_vision">Visie</a></li>
-                        <li class="nav-item"><a href="yearbook.html" class="nav-link" data-translate="nav_yearbook">Jaarboek</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link" data-translate="nav_about">Over Ons</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link" data-translate="nav_contact">Contact</a></li>
-                    </ul>
-                    <div class="d-xxl-none lang-switcher-mobile">
-                        <button id="lang-ti-mobile" onclick="setLanguage('ti')" class="btn lang-btn lang-btn-inactive">ትግርኛ</button>
-                        <button id="lang-nl-mobile" onclick="setLanguage('nl')" class="btn lang-btn lang-btn-active">NL</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="d-none d-xxl-flex lang-switcher">
-                <button id="lang-ti" onclick="setLanguage('ti')" class="btn lang-btn lang-btn-inactive">ትግ</button>
-                <button id="lang-nl" onclick="setLanguage('nl')" class="btn lang-btn lang-btn-active">NL</button>
-            </div>
-        </div>
-    </nav>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Abune Endryas</title>
+  <meta name="description" content="Contactgegevens, bezoekadres en diensttijden van de Eritrees-Orthodoxe Tewahedo Kerk Debre Tsige Abune Endryas in Delft.">
+  <link rel="canonical" href="https://www.abuneendryashaaglanden.org/contact.html">
+  <meta name="robots" content="index, follow">
 
-    <!-- Page Header -->
-    <section class="page-header text-white py-5 px-3">
-        <div class="container text-center">
-            <h1 class="display-5 fw-bold mb-3" data-translate="contact_title">Contact</h1>
-            <p class="fs-5" data-translate="contact_subtitle">Neem contact met ons op</p>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Abune Endryas">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Contact | Abune Endryas">
+  <meta property="og:description" content="Contactgegevens, bezoekadres en diensttijden van de Eritrees-Orthodoxe Tewahedo Kerk Debre Tsige Abune Endryas in Delft.">
+  <meta property="og:url" content="https://www.abuneendryashaaglanden.org/contact.html">
+  <meta property="og:image" content="https://www.abuneendryashaaglanden.org/images/hero/hero-1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Naar de inhoud</a>
+
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="" class="brand-logo" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-name">Abune Endryas</span>
+          <span class="brand-sub">Eritrees-Orthodoxe Tewahedo Kerk</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#mainMenu" aria-controls="mainMenu" aria-label="Menu openen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h6 mb-0" id="mainMenuLabel">Menu</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Sluiten"></button>
         </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Over ons</a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="about.html">Onze kerk</a></li>
+          <li><a class="dropdown-item" href="mission.html">Missie</a></li>
+          <li><a class="dropdown-item" href="vision.html">Visie 2040</a></li>
+          <li><a class="dropdown-item" href="church-leaders.html">Kerkbestuur</a></li>
+          <li><a class="dropdown-item" href="sunday-school-leaders.html">Zondagsschool</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Diensten</a></li>
+        <li class="nav-item"><a class="nav-link" href="beleidsplan.html">Beleidsplan</a></li>
+        <li class="nav-item"><a class="nav-link" href="yearbook.html">Jaarboek</a></li>
+        <li class="nav-item"><a class="nav-link" href="afbeeldingen.html">Afbeeldingen</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <nav class="crumbs" aria-label="Kruimelpad"><a href="index.html">Home</a><span>/</span>Contact</nav>
+        <h1>Contact</h1>
+        <p>Bezoekadres, diensttijden en contactgegevens van onze kerk in Delft.</p>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="py-5">
-        <div class="container">
-            <div class="section-divider"></div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-lg-8 col-xl-6">
-                    <div class="d-flex flex-column gap-4">
-                        <!-- Contact Details -->
-                        <div class="card shadow-lg border-0 rounded-3 p-4 fade-in card-hover">
-                            <div class="card-body">
-                                <h3 class="h5 fw-bold mb-3" data-translate="contact_details">Contactgegevens</h3>
-                                <div class="text-gray-700">
-                                    <p class="mb-2"><strong>Email:</strong> eotcdn.denhaag@gmail.com</p>
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
 
-                                </div>
-                            </div>
-                        </div>
+          <div class="col-12 col-lg-5 reveal">
+            <span class="eyebrow">Gegevens</span>
+            <h2 class="section-title">Neem contact op</h2>
+            <hr class="rule mt-3">
+            <p class="mb-4">Voor vragen over de diensten, pastorale begeleiding, de zondagsschool,
+              giften of de jaarlijkse verantwoording kunt u het bestuur bereiken via onderstaande gegevens.</p>
 
-                        <!-- Location -->
-                        <div class="card shadow-lg border-0 rounded-3 p-4 fade-in card-hover">
-                            <div class="card-body">
-                                <h3 class="h5 fw-bold mb-3" data-translate="contact_location">Locatie</h3>
-                                <p class="text-gray-700 mb-3">Obrechtstraat 50<br>2625 XN Delft<br>Nederland</p>
-                                <!-- Google Maps Embed -->
-                                <div class="rounded-3 overflow-hidden bg-light" style="height: 220px;">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.5!2d4.3567!3d52.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c1234567890%3A0x9876543210!2sObrechtstraat%2050%2C%202625%20XN%20Delft%2C%20Netherlands!5e0!3m2!1snl!2snl!4v1234567890!5m2!1snl!2snl"
-                                        width="100%"
-                                        height="100%"
-                                        style="border:0;"
-                                        allowfullscreen=""
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                        title="Abune Endryas Church Location - Obrechtstraat 50, 2625 XN Delft">
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
+            <div class="contact-item">
+              <span class="ci-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <h3>Adres</h3>
+                <p>Obrechtstraat 50<br>2625 XN Delft<br>Nederland</p>
+              </div>
+            </div>
 
-                        <!-- Service Times -->
-                        <div class="card shadow-lg border-0 rounded-3 p-4 fade-in card-hover">
-                            <div class="card-body">
-                                <h3 class="h5 fw-bold mb-3" data-translate="contact_service_times">Diensttijden</h3>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="fw-semibold" data-translate="services_every_saturday">Elke zaterdag</span>
-                                    <span class="text-gray-700">05:00 - 12:00</span>
-                                </div>
-                                <p class="text-gray-600 small mb-0" data-translate="services_feasts_contact">+ grote Eritrees-Orthodoxe feestdagen</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="contact-item">
+              <span class="ci-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              </span>
+              <div>
+                <h3>E-mail</h3>
+                <p><a href="mailto:eotcdn.denhaag@gmail.com">eotcdn.denhaag@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="ci-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div>
+                <h3>Diensttijden</h3>
+                <p>Elke zaterdag 05:00 &ndash; 12:00 uur<br>
+                  <span style="color:var(--muted)">en op de grote Eritrees-Orthodoxe feestdagen</span></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="ci-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3z"/></svg>
+              </span>
+              <div>
+                <h3>Volg ons</h3>
+                <p><a href="https://www.facebook.com/abune.endrias.5" target="_blank" rel="noopener">Facebook</a> &nbsp;&middot;&nbsp;
+                   <a href="https://www.youtube.com/@debre-xgie-haaglanden" target="_blank" rel="noopener">YouTube</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7 reveal">
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps?q=Obrechtstraat+50,+2625+XN+Delft,+Nederland&hl=nl&z=16&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Kaart met de locatie Obrechtstraat 50, 2625 XN Delft"></iframe>
+            </div>
+            <div class="row g-3 mt-1">
+              <div class="col-12">
+                <div class="panel">
+                  <h3 class="h6 mb-2">Bezoek de liturgie</h3>
+                  <p class="mb-0" style="font-size:.94rem;color:var(--muted)">Iedereen is welkom.
+                    Kom gerust een keer kijken; er is altijd iemand die u wegwijs maakt.</p>
                 </div>
+              </div>
             </div>
-        </div>
-    </main>
+          </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-5 mt-5">
-        <div class="container text-center">
-            <div class="d-flex justify-content-center gap-3 mb-3">
-                <a href="https://www.facebook.com/abune.endrias.5" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                </a>
-                <a href="https://www.youtube.com/@debre-xgie-haaglanden?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </a>
-            </div>
-            <p class="mb-0">&copy; 2026 <span data-translate="church_name">Abune Endryas</span>. All rights reserved.</p>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/translations.js"></script>
-    <script src="js/language.js"></script>
-    <script src="js/utils.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-12 col-lg-4">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="" width="52" height="52">
+            <span>
+              <strong>Abune Endryas</strong>
+              <span>Debre Tsige &middot; Delft</span>
+            </span>
+          </div>
+          <p class="mb-0">Eritrees-Orthodoxe Tewahedo Kerk. Een geestelijk thuis voor de
+            gemeenschap en een partner binnen de Nederlandse samenleving.</p>
+          <div class="social-row">
+            <a class="social-btn" href="https://www.facebook.com/abune.endrias.5" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.02 24 18.06 24 12.07z"/></svg>
+            </a>
+            <a class="social-btn" href="https://www.youtube.com/@debre-xgie-haaglanden" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Over ons</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Onze kerk</a></li>
+            <li><a href="mission.html">Missie</a></li>
+            <li><a href="vision.html">Visie 2040</a></li>
+            <li><a href="church-leaders.html">Kerkbestuur</a></li>
+            <li><a href="sunday-school-leaders.html">Zondagsschool</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Informatie</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Diensten</a></li>
+            <li><a href="beleidsplan.html">Beleidsplan</a></li>
+            <li><a href="yearbook.html">Jaarboek</a></li>
+            <li><a href="afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <h4>Contact</h4>
+          <p class="mb-2">Obrechtstraat 50<br>2625 XN Delft<br>Nederland</p>
+          <p class="mb-2"><a href="mailto:eotcdn.denhaag@gmail.com">eotcdn.denhaag@gmail.com</a></p>
+          <p class="mb-0"><strong style="color:#fff">Kerkdienst:</strong> elke zaterdag 05:00&ndash;12:00 uur</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>&copy; <span data-year>2026</span> Eritrees-Orthodoxe Tewahedo Kerk Debre Tsige Abune Endryas</span>
+        <span>Obrechtstraat 50, 2625 XN Delft</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

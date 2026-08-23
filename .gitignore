@@ -16,3 +16,7 @@ Thumbs.db
 *.tmp
 *.temp
 
+
+# Originele, ongecomprimeerde hero-foto's (webversies staan in images/hero/)
+/images/[0-9].png
+/images/[0-9][0-9].png

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Beleidsplan 2026-2040 — Eritrees-Orthodoxe Tewahedo Kerk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Beleidsplan 2026-2040 — opmaakbestand
+   Genereer de PDF opnieuw met:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+       --headless --disable-gpu --no-pdf-header-footer \
+       --print-to-pdf=docs/beleidsplan-2026-2040.pdf \
+       docs/beleidsplan-bron.html
+   ============================================================ */
+
+@page { size: A4; margin: 20mm 18mm 18mm; }
+@page :first { margin: 0; }
+
+:root {
+  --navy-900:#0b1f39; --navy-800:#12305a; --navy-700:#1a4276;
+  --navy-50:#f2f6fb; --navy-100:#e7edf5;
+  --gold-600:#9a7222; --gold-500:#b8892b; --gold-300:#dcbc70; --gold-50:#faf4e6;
+  --ink:#16202c; --body:#2f3945; --muted:#6b7480; --line:#dcdad3;
+}
+
+* { box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+html,body { margin:0; padding:0; }
+
+body {
+  font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;
+  font-size:10.2pt; line-height:1.62; color:var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4 { font-family:'Lora',Georgia,serif; color:var(--ink); margin:0; line-height:1.22; }
+
+p { margin:0 0 7pt; }
+p:last-child { margin-bottom:0; }
+strong { color:var(--ink); font-weight:600; }
+
+/* ---------------- Omslag ---------------- */
+
+.cover {
+  margin:0;
+  padding:0;
+  width:210mm;
+  height:297mm;
+  background:var(--navy-900);
+  background-image:linear-gradient(155deg,#0b1f39 0%,#16385f 58%,#0b1f39 100%);
+  color:#fff;
+  page-break-after:always;
+  position:relative;
+  overflow:hidden;
+}
+.cover-inner { padding:42mm 22mm 22mm; height:100%; display:flex; flex-direction:column; }
+
+.cover-mark {
+  width:26mm; height:26mm; border-radius:50%;
+  background:#fff; padding:1.6mm; margin-bottom:14mm;
+}
+.cover-mark img { width:100%; height:100%; border-radius:50%; display:block; object-fit:cover; }
+
+.cover-eyebrow {
+  font-size:8.4pt; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--gold-300); margin-bottom:9mm;
+}
+.cover h1 { font-size:33pt; color:#fff; font-weight:600; letter-spacing:-.5pt; margin-bottom:5mm; }
+.cover-rule { width:34mm; height:1.1mm; background:var(--gold-500); margin-bottom:8mm; }
+.cover-sub { font-size:12.5pt; color:rgba(255,255,255,.9); max-width:120mm; line-height:1.55; font-family:'Lora',Georgia,serif; }
+
+.cover-foot { margin-top:auto; border-top:.4mm solid rgba(255,255,255,.28); padding-top:6mm; }
+.cover-foot .org { font-family:'Lora',Georgia,serif; font-size:12pt; color:#fff; font-weight:600; }
+.cover-foot .loc { font-size:8.6pt; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.62); margin-top:1.6mm; }
+
+/* Kopregel met logo op de openingspagina van elk deel */
+.doc-brand {
+  display:flex; align-items:center; gap:3.5mm;
+  padding-bottom:3.2mm; margin-bottom:9mm;
+  border-bottom:.25mm solid var(--line);
+  page-break-after:avoid; break-after:avoid;
+}
+.doc-brand img { width:9mm; height:9mm; border-radius:50%; display:block; }
+.doc-brand .nm {
+  font-family:'Lora',Georgia,serif; font-size:9.6pt; font-weight:600; color:var(--navy-800);
+}
+.doc-brand .dc {
+  margin-left:auto; font-size:7.6pt; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------------- Inhoudsopgave ---------------- */
+
+.toc { page-break-after:always; }
+.toc-list { list-style:none; margin:0; padding:0; }
+.toc-list li { border-bottom:.25mm solid var(--line); font-size:10.4pt; }
+.toc-list a {
+  display:flex; align-items:baseline; gap:5mm;
+  padding:3.1mm 0; text-decoration:none; color:inherit;
+}
+.toc-list .n {
+  flex:0 0 11mm; font-family:'Lora',Georgia,serif; font-weight:600;
+  color:var(--gold-600); font-size:10.4pt;
+}
+.toc-list .t { color:var(--ink); font-weight:500; }
+.toc-list .sub { padding-left:16mm; font-size:9.5pt; }
+.toc-list .sub .t { color:var(--body); font-weight:400; }
+
+/* ---------------- Secties ---------------- */
+
+.sec { page-break-inside:auto; margin-bottom:11mm; }
+.sec.break { page-break-before:always; }
+
+.sec-head { margin-bottom:6mm; page-break-inside:avoid; break-inside:avoid;
+            page-break-after:avoid; break-after:avoid; }
+.sec-num {
+  display:inline-block; font-size:8pt; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--gold-600); margin-bottom:2.6mm;
+}
+.sec-head h2 { font-size:19pt; margin-bottom:3.4mm; }
+.sec-head .rule { width:24mm; height:.9mm; background:var(--gold-500); }
+
+h3.sub-head {
+  font-size:12.4pt; color:var(--navy-800); margin:8mm 0 3mm;
+  page-break-after:avoid;
+}
+h4.mini {
+  font-family:'Inter',sans-serif; font-size:7.8pt; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+  margin:5mm 0 2.4mm; page-break-after:avoid; break-after:avoid;
+}
+.panel h4.mini, .prio-cols h4.mini { margin-top:0; }
+
+.lead { font-size:11.4pt; line-height:1.6; color:var(--ink); font-family:'Lora',Georgia,serif; }
+
+/* Lijsten met gouden bullets */
+ul.dot { list-style:none; margin:0 0 7pt; padding:0; }
+ul.dot li { position:relative; padding-left:6mm; margin-bottom:2mm; }
+ul.dot li:last-child { margin-bottom:0; }
+ul.dot li::before {
+  content:""; position:absolute; left:0; top:2.5mm;
+  width:1.7mm; height:1.7mm; border-radius:50%; background:var(--gold-500);
+}
+ul.dot.two { column-count:2; column-gap:9mm; }
+ul.dot.two li { break-inside:avoid; }
+
+/* Uitgelicht kader (visie / missie) */
+.statement {
+  page-break-inside:avoid;
+  background:var(--navy-50); border:.25mm solid var(--navy-100);
+  border-left:1.1mm solid var(--gold-500);
+  padding:7mm 8mm; margin:0 0 7mm; page-break-inside:avoid;
+}
+.statement p { font-family:'Lora',Georgia,serif; font-size:12pt; line-height:1.55; color:var(--ink); }
+
+/* Waardenraster */
+.values { display:grid; grid-template-columns:1fr 1fr; gap:4mm 8mm; page-break-inside:avoid; }
+.value { border-left:.7mm solid var(--gold-500); padding-left:4mm; page-break-inside:avoid; }
+.value h4 { font-family:'Lora',Georgia,serif; font-size:10.8pt; color:var(--ink); font-weight:600; margin:0 0 1mm; }
+.value p { font-size:9.6pt; color:var(--muted); margin:0; }
+
+/* Uitdaging-blok */
+.challenge { margin-bottom:7mm; page-break-inside:avoid; }
+.challenge .tag {
+  display:inline-block; font-size:7.6pt; font-weight:600; letter-spacing:.12em;
+  color:var(--gold-600); background:var(--gold-50); border:.25mm solid #efe1c2;
+  padding:.6mm 2.2mm; margin-bottom:2.2mm;
+}
+.challenge h3 { font-size:11.8pt; color:var(--navy-800); margin-bottom:2.4mm; }
+
+/* Prioriteitsblok */
+.prio { border:.3mm solid var(--line); margin-bottom:6mm; page-break-inside:avoid; }
+.prio-head {
+  background:var(--navy-800); color:#fff;
+  padding:3.4mm 6mm; display:flex; align-items:baseline; gap:5mm;
+}
+.prio-head .rn {
+  font-family:'Lora',Georgia,serif; font-size:9.4pt; font-weight:600;
+  color:var(--gold-300); letter-spacing:.1em; flex:0 0 auto;
+}
+.prio-head h3 { font-size:12pt; color:#fff; margin:0; }
+.prio-body { padding:5mm 6mm 5.5mm; }
+.prio-aim { margin-bottom:4.5mm; }
+.prio-cols { display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
+.prio-cols ul.dot li { font-size:9.5pt; margin-bottom:1.5mm; }
+.prio-cols ul.dot li::before { top:1.8mm; width:1.5mm; height:1.5mm; }
+
+/* Tweekolomsblok voor bestuur / financieel */
+.split { display:grid; grid-template-columns:1fr 1fr; gap:8mm; page-break-inside:avoid; }
+.panel { background:var(--navy-50); border:.25mm solid var(--navy-100); padding:5.5mm 6mm; page-break-inside:avoid; }
+.panel h4 { font-family:'Lora',Georgia,serif; font-size:10.6pt; color:var(--navy-800); font-weight:600; margin:0 0 3mm; letter-spacing:0; text-transform:none; }
+.panel ul.dot li { font-size:9.6pt; margin-bottom:1.4mm; }
+
+/* Slot */
+.closing {
+  background:var(--navy-900); background-image:linear-gradient(150deg,#0b1f39,#16385f);
+  color:#fff; padding:9mm 10mm; page-break-inside:avoid;
+}
+.closing h2 { color:#fff; font-size:16pt; margin-bottom:4mm; }
+.closing .rule { width:22mm; height:.9mm; background:var(--gold-300); margin-bottom:5mm; }
+.closing p { color:rgba(255,255,255,.9); font-size:10.6pt; }
+
+/* Colofon */
+.colophon { margin-top:9mm; border-top:.4mm solid var(--line); padding-top:5mm; font-size:9.4pt; color:var(--muted); }
+.colophon .row { display:flex; gap:4mm; margin-bottom:1.6mm; }
+.colophon .k { flex:0 0 34mm; color:var(--ink); font-weight:600; }
+</style>
+</head>
+<body>
+
+<!-- ============ OMSLAG ============ -->
+<section class="cover">
+  <div class="cover-inner">
+    <div class="cover-mark"><img src="logo-mark.jpg" alt=""></div>
+    <div class="cover-eyebrow">Eritrees-Orthodoxe Tewahedo Kerk</div>
+    <h1>Beleidsplan<br>2026&ndash;2040</h1>
+    <div class="cover-rule"></div>
+    <p class="cover-sub">Visie, missie, strategische doelstellingen en beleidsvoornemens
+      voor de ontwikkeling van de kerk in Nederland.</p>
+    <div class="cover-foot">
+      <div class="org">Debre Tsige Abune Endryas</div>
+      <div class="loc">Obrechtstraat 50 &middot; 2625 XN Delft &middot; Nederland</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INHOUD ============ -->
+<section class="toc">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Inhoud</span>
+    <h2>Inhoudsopgave</h2>
+    <div class="rule"></div>
+  </div>
+  <ul class="toc-list">
+    <li><a href="#h1"><span class="n">1</span><span class="t">Voorwoord</span></a></li>
+    <li><a href="#h2"><span class="n">2</span><span class="t">Inleiding</span></a></li>
+    <li><a href="#h3"><span class="n">3</span><span class="t">Kerkelijke identiteit</span></a></li>
+    <li><a href="#h4"><span class="n">4</span><span class="t">Visie 2040</span></a></li>
+    <li><a href="#h5"><span class="n">5</span><span class="t">Missie</span></a></li>
+    <li><a href="#h6"><span class="n">6</span><span class="t">Kernwaarden</span></a></li>
+    <li><a href="#h7"><span class="n">7</span><span class="t">Analyse van de huidige en toekomstige uitdagingen</span></a></li>
+    <li><a href="#h8"><span class="n">8</span><span class="t">Strategische doelen 2026&ndash;2040</span></a></li>
+    <li><a href="#h9"><span class="n">9</span><span class="t">Gemeenschapsopbouw in de diaspora</span></a></li>
+    <li><a href="#h10"><span class="n">10</span><span class="t">Goed bestuur</span></a></li>
+    <li><a href="#h11"><span class="n">11</span><span class="t">Financieel beleid</span></a></li>
+    <li><a href="#h12"><span class="n">12</span><span class="t">Sociale veiligheid</span></a></li>
+    <li><a href="#h13"><span class="n">13</span><span class="t">Evaluatie en verantwoording</span></a></li>
+    <li><a href="#h14"><span class="n">14</span><span class="t">Slotverklaring</span></a></li>
+  </ul>
+</section>
+
+<section class="sec break">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 1</span>
+    <h2 id="h1">Voorwoord</h2>
+    <div class="rule"></div>
+  </div>
+  <p class="lead">De Eritrees-Orthodoxe Tewahedo Kerk in Nederland staat voor een historische
+    opdracht. De eerste generatie bracht het geloof, de tradities en de spirituele rijkdom van de
+    Kerk naar Nederland. De komende decennia zullen bepalen of deze rijkdom duurzaam wordt
+    doorgegeven aan toekomstige generaties die opgroeien in een seculiere, digitale en cultureel
+    diverse samenleving.</p>
+  <p>Dit beleidsplan geeft richting aan de ontwikkeling van de kerk tussen 2026 en 2040. Het
+    combineert de eeuwenoude orthodoxe traditie met de hedendaagse uitdagingen van diaspora,
+    integratie, technologische verandering en maatschappelijke verantwoordelijkheid.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 2</span>
+    <h2 id="h2">Inleiding</h2>
+    <div class="rule"></div>
+  </div>
+  <p>Dit beleidsplan beschrijft de visie, missie, strategische doelstellingen en
+    beleidsvoornemens van de Eritrees-Orthodoxe Tewahedo Kerk in Nederland voor de periode
+    2026&ndash;2040.</p>
+  <p>Het plan is opgesteld in het kader van goed bestuur, maatschappelijke verantwoordelijkheid en
+    transparantie conform de uitgangspunten van de ANBI-regelgeving. Het richt zich op de duurzame
+    ontwikkeling van de kerk als geestelijke, sociale en culturele gemeenschap binnen de
+    Nederlandse samenleving.</p>
+  <p>De kerk bevindt zich in een bijzondere context. Een groot deel van de leden bestaat uit
+    vluchtelingen en migranten die hun geloof, cultuur en tradities hebben meegenomen naar
+    Nederland. Tegelijkertijd groeit een nieuwe generatie op in een Nederlandse, digitale en sterk
+    geseculariseerde samenleving. Deze ontwikkelingen vragen om een langetermijnvisie waarin
+    orthodox geloof, integratie en maatschappelijke betrokkenheid hand in hand gaan.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 3</span>
+    <h2 id="h3">Kerkelijke identiteit</h2>
+    <div class="rule"></div>
+  </div>
+  <p>De Eritrees-Orthodoxe Tewahedo Kerk behoort tot de Ori&euml;ntaals-Orthodoxe Kerken en staat
+    in de apostolische traditie die teruggaat tot de vroegchristelijke Kerk.</p>
+  <p>De kerk beschouwt zichzelf als:</p>
+  <ul class="dot">
+    <li>een gemeenschap van aanbidding</li>
+    <li>een plaats van geloofsoverdracht</li>
+    <li>een geestelijk thuis voor gelovigen</li>
+    <li>een centrum van onderlinge solidariteit</li>
+    <li>een partner binnen de Nederlandse samenleving</li>
+    <li>een bron van hoop, begeleiding en dienstverlening voor vluchtelingen en kwetsbare groepen</li>
+  </ul>
+  <p style="margin-top:5mm">De kerk streeft ernaar haar orthodoxe identiteit te behouden terwijl
+    zij actief participeert in de samenleving waarin haar leden leven.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 4</span>
+    <h2 id="h4">Visie 2040</h2>
+    <div class="rule"></div>
+  </div>
+  <h4 class="mini" style="margin-top:0">Onze visie</h4>
+  <div class="statement">
+    <p>De Eritrees-Orthodoxe Tewahedo Kerk in Nederland wil in 2040 een geestelijk sterke,
+      maatschappelijk betrokken, veerkrachtige, intergenerationele, financieel gezonde en
+      toekomstbestendige geloofsgemeenschap zijn die:</p>
+  </div>
+  <ul class="dot">
+    <li>Christus centraal stelt in alle activiteiten</li>
+    <li>het orthodoxe geloof overdraagt aan volgende generaties</li>
+    <li>gezinnen versterkt</li>
+    <li>jongeren actief betrekt bij het kerkelijk leven en hen een actieve rol laat vervullen</li>
+    <li>technologie verantwoord inzet</li>
+    <li>een constructieve bijdrage levert aan de Nederlandse samenleving</li>
+    <li>de eenheid binnen de gemeenschap bevordert</li>
+    <li>het orthodoxe geloof levendig laat beleven</li>
+    <li>meerdere generaties samen laat bouwen aan &eacute;&eacute;n kerk</li>
+    <li>vluchtelingen, migranten en kwetsbaren hoop en begeleiding biedt</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 5</span>
+    <h2 id="h5">Missie</h2>
+    <div class="rule"></div>
+  </div>
+  <h4 class="mini" style="margin-top:0">Onze missie</h4>
+  <p>De kerk heeft als opdracht:</p>
+  <div class="statement">
+    <p>God te verheerlijken door eredienst, onderwijs, pastoraat, dienstbaarheid en
+      gemeenschapsvorming, zodat gelovigen kunnen groeien in geloof en gezamenlijk kunnen
+      bijdragen aan een rechtvaardige, vreedzame en hoopvolle samenleving.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 6</span>
+    <h2 id="h6">Kernwaarden</h2>
+    <div class="rule"></div>
+  </div>
+  <p>De kerk baseert haar handelen op de volgende waarden:</p>
+  <div class="values">
+    <div class="value"><h4>Geloof</h4><p>Trouw aan het orthodoxe geloof en de apostolische traditie</p></div>
+    <div class="value"><h4>Liefde</h4><p>Dienstbaarheid aan alle mensen zonder onderscheid</p></div>
+    <div class="value"><h4>Gemeenschap</h4><p>Versterking van onderlinge verbondenheid</p></div>
+    <div class="value"><h4>Integriteit</h4><p>Verantwoord beheer van middelen en transparant bestuur</p></div>
+    <div class="value"><h4>Verantwoordelijkheid</h4><p>Bijdragen aan het welzijn van de kerk, samenleving en toekomstige generaties</p></div>
+    <div class="value"><h4>Respect</h4><p>Respect voor menselijke waardigheid en culturele diversiteit</p></div>
+  </div>
+</section>
+
+<section class="sec break">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 7</span>
+    <h2 id="h7">Analyse van de huidige en toekomstige uitdagingen</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="challenge">
+    <span class="tag">7.1</span>
+    <h3>Geloofsoverdracht aan jongeren</h3>
+    <p>Veel jongeren groeien op in een samenleving waarin kerkelijk leven geen vanzelfsprekend
+      onderdeel meer is van het dagelijks leven. De grootste uitdaging voor de komende vijftien
+      jaar is het behouden van de verbinding tussen de kerk en jongeren die in Nederland opgroeien.</p>
+    <h4 class="mini">Belangrijke uitdagingen:</h4>
+    <ul class="dot two">
+    <li>afnemende religieuze betrokkenheid</li>
+    <li>identiteitsvragen</li>
+    <li>taalbarri&egrave;res</li>
+    <li>beperkte kennis van orthodoxe tradities</li>
+    <li>invloed van sociale media</li>
+  </ul>
+    <h4 class="mini">De kerk ziet het als haar verantwoordelijkheid om:</h4>
+    <ul class="dot two">
+    <li>orthodox geloof begrijpelijk over te dragen</li>
+    <li>jongeren eigenaarschap te geven</li>
+    <li>ruimte te cre&euml;ren voor vragen en dialoog</li>
+    <li>bruggen te bouwen tussen traditie en hedendaagse cultuur</li>
+  </ul>
+  </div>
+
+  <div class="challenge">
+    <span class="tag">7.2</span>
+    <h3>Gezin en familieleven</h3>
+    <p>Maatschappelijke veranderingen hebben invloed op gezinsstructuren: opvoeding, huwelijk,
+      sociale verbondenheid. Binnen de gemeenschap ontstaan uitdagingen zoals:</p>
+    <ul class="dot two">
+    <li>generatieverschillen</li>
+    <li>opvoedingsvraagstukken</li>
+    <li>huwelijksproblemen</li>
+    <li>eenzaamheid</li>
+    <li>spanningen tussen traditionele en moderne waarden</li>
+  </ul>
+    <p style="margin-top:4mm">De kerk wil gezinnen versterken als fundament van gemeenschap en
+      geloofsoverdracht.</p>
+  </div>
+
+  <div class="challenge">
+    <span class="tag">7.3</span>
+    <h3>Vluchtelingen en nieuwe migranten</h3>
+    <p>Veel kerkleden hebben ervaring met migratie, ontheemding of asielprocedures. Daarom hebben leden
+      te maken met:</p>
+    <ul class="dot two">
+    <li>trauma</li>
+    <li>gezinshereniging</li>
+    <li>integratievraagstukken</li>
+    <li>werkloosheid</li>
+    <li>juridische procedures</li>
+    <li>sociaal isolement</li>
+  </ul>
+    <h4 class="mini">De kerk wil een gemeenschap zijn waar mensen:</h4>
+    <ul class="dot two">
+    <li>veiligheid ervaren</li>
+    <li>praktische ondersteuning ontvangen</li>
+    <li>sociale netwerken kunnen opbouwen</li>
+    <li>geestelijke begeleiding krijgen</li>
+  </ul>
+  </div>
+
+  <div class="challenge">
+    <span class="tag">7.4</span>
+    <h3>Individualisering</h3>
+    <p>De Nederlandse samenleving wordt steeds individualistischer.</p>
+    <p>De kerk wil daarom investeren in:</p>
+    <ul class="dot two">
+    <li>gemeenschapsvorming</li>
+    <li>onderlinge zorg</li>
+    <li>vrijwilligerswerk</li>
+    <li>gedeelde verantwoordelijkheid</li>
+  </ul>
+  </div>
+
+  <div class="challenge">
+    <span class="tag">7.5</span>
+    <h3>Polarisatie en sociale spanningen</h3>
+    <p>De samenleving wordt geconfronteerd met:</p>
+    <ul class="dot two">
+    <li>politieke verdeeldheid</li>
+    <li>culturele spanningen</li>
+    <li>online radicalisering</li>
+    <li>groeiend wantrouwen</li>
+  </ul>
+    <h4 class="mini">De kerk wil een plaats zijn van:</h4>
+    <ul class="dot two">
+    <li>dialoog</li>
+    <li>vrede</li>
+    <li>verzoening</li>
+    <li>wederzijds respect</li>
+  </ul>
+  </div>
+
+  <div class="challenge">
+    <span class="tag">7.6</span>
+    <h3>Technologische ontwikkelingen</h3>
+    <p>Digitalisering en kunstmatige intelligentie veranderen de manier waarop mensen communiceren,
+      leren en geloven. Digitalisering en kunstmatige intelligentie cre&euml;ren nieuwe kansen en
+      risico&rsquo;s.</p>
+    <div class="split" style="margin-top:4mm">
+      <div><h4 class="mini" style="margin-top:0">Risico&rsquo;s:</h4>
+      <ul class="dot">
+    <li>sociale isolatie</li>
+    <li>verslaving aan schermgebruik</li>
+    <li>desinformatie</li>
+    <li>afname van persoonlijk contact</li>
+  </ul>
+</div>
+      <div><h4 class="mini" style="margin-top:0">Kansen:</h4>
+      <p style="font-size:9.6pt;margin-bottom:2.4mm">De kerk wil technologie gebruiken ter
+        ondersteuning van:</p>
+      <ul class="dot">
+    <li>onderwijs</li>
+    <li>communicatie</li>
+    <li>administratie</li>
+    <li>evangelisatie</li>
+    <li>pastorale zorg</li>
+  </ul>
+</div>
+    </div>
+    <p style="margin-top:4mm">Tegelijkertijd wil zij bewustwording cre&euml;ren rond digitale
+      risico&rsquo;s.</p>
+  </div>
+</section>
+
+<section class="sec break">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 8</span>
+    <h2 id="h8">Strategische doelen 2026&ndash;2040</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit I</span><h3>Geestelijke verdieping</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Versterking van het geloofsleven van alle leeftijdsgroepen.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>uitbreiding van bijbelonderwijs</li>
+    <li>verdieping van liturgisch onderwijs</li>
+    <li>jaarlijkse geestelijke conferenties</li>
+    <li>retraites voor verschillende doelgroepen</li>
+    <li>ontwikkeling van digitaal lesmateriaal</li>
+    <li>versterking van pastorale begeleiding</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>grotere betrokkenheid bij erediensten</li>
+    <li>hogere deelname aan vormingsactiviteiten</li>
+    <li>sterkere geloofsidentiteit</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit II</span><h3>Jongeren en toekomstig leiderschap</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Een nieuwe generatie voorbereiden op verantwoordelijkheid binnen kerk en samenleving.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>jongerenraad op nationaal niveau</li>
+    <li>leiderschapstrajecten</li>
+    <li>mentorprogramma&rsquo;s</li>
+    <li>studentenplatforms</li>
+    <li>jeugdconferenties</li>
+    <li>vrijwilligersprojecten</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>duurzame jongerenparticipatie</li>
+    <li>toekomstige kerkelijke leiders</li>
+    <li>grotere verbinding tussen jongeren en kerk</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit III</span><h3>Gezinsontwikkeling</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Gezinnen ondersteunen in een snel veranderende samenleving.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>gezinsdagen</li>
+    <li>huwelijkstoerusting</li>
+    <li>opvoedingsondersteuning</li>
+    <li>begeleiding bij relationele problemen</li>
+    <li>intergenerationele activiteiten</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>sterkere gezinsrelaties</li>
+    <li>betere geloofsoverdracht binnen gezinnen</li>
+    <li>hogere sociale cohesie</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit IV</span><h3>Sociale dienstbaarheid</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Concrete ondersteuning bieden aan kwetsbare personen.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>begeleiding van nieuwkomers</li>
+    <li>maatschappelijke doorverwijzing</li>
+    <li>noodhulpinitiatieven</li>
+    <li>bezoekwerk</li>
+    <li>ondersteuning van ouderen</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>grotere zelfredzaamheid</li>
+    <li>vermindering van sociaal isolement</li>
+    <li>versterkte onderlinge solidariteit</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit V</span><h3>Integratie en burgerschap</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Leden ondersteunen bij actieve deelname aan de Nederlandse samenleving.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>informatiebijeenkomsten</li>
+    <li>maatschappelijke ori&euml;ntatie</li>
+    <li>samenwerking met gemeenten</li>
+    <li>samenwerkingsprojecten met lokale organisaties</li>
+    <li>stimulering van vrijwilligerswerk</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>sterkere maatschappelijke participatie</li>
+    <li>betere verbinding tussen kerk en samenleving</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit VI</span><h3>Digitale transformatie</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>De kerk voorbereiden op de digitale toekomst.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>digitaal communicatieplatform</li>
+    <li>online onderwijsomgeving</li>
+    <li>digitale archivering</li>
+    <li>livestreaming van diensten</li>
+    <li>verbetering van gegevensbeheer</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>betere bereikbaarheid</li>
+    <li>grotere betrokkenheid</li>
+    <li>effici&euml;ntere organisatie</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit VII</span><h3>Vorming en opleiding</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Investeren in kennis, vaardigheden en geestelijke vorming.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties</h4>
+      <ul class="dot">
+    <li>opleiding van diakenen</li>
+    <li>vorming van toekomstige priesters</li>
+    <li>trainingen voor vrijwilligers</li>
+    <li>scholing van bestuurders</li>
+    <li>ontwikkeling van lesmateriaal in relevante talen</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Gewenste resultaten</h4>
+      <ul class="dot">
+    <li>duurzame kennisoverdracht</li>
+    <li>versterking van kwaliteit van dienstverlening</li>
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="prio">
+    <div class="prio-head"><span class="rn">Prioriteit VIII</span><h3>Duurzame kerkontwikkeling en infrastructuur</h3></div>
+    <div class="prio-body">
+    <p class="prio-aim"><strong>Doel</strong><br>Bouwen aan een toekomstbestendige, financieel gezonde en goed gefaciliteerde geloofsgemeenschap die beschikt over passende voorzieningen voor eredienst, gemeenschapsvorming, pastorale zorg en toekomstige groei.</p>
+    <div class="prio-cols">
+      <div><h4 class="mini">Kernacties &mdash; Organisatie en duurzaamheid</h4>
+      <ul class="dot">
+    <li>professionalisering van bestuur en interne processen</li>
+    <li>versterking van financieel beheer en risicomanagement</li>
+    <li>ontwikkeling van meerjarenonderhoudsplannen</li>
+    <li>opbouw van financi&euml;le reserves en continu&iuml;teitsfondsen</li>
+    <li>implementatie van duurzaamheidsmaatregelen in de bedrijfsvoering</li>
+  </ul>
+</div>
+      <div><h4 class="mini">Kernacties &mdash; Kerkelijke infrastructuur</h4>
+      <ul class="dot">
+    <li>verwerving van een eigen kerkgebouw indien haalbaar</li>
+    <li>renovatie en modernisering van bestaande gebouwen</li>
+    <li>verduurzaming van kerkelijke voorzieningen</li>
+    <li>ontwikkeling van multifunctionele gemeenschapsruimten voor eredienst, catechese, jeugdwerk, gezinsactiviteiten en sociale dienstverlening</li>
+    <li>verbetering van toegankelijkheid, veiligheid en gebruikscomfort van gebouwen</li>
+    <li>cre&euml;ren van voldoende capaciteit voor toekomstige groei van de gemeenschap</li>
+  </ul>
+</div>
+    </div>
+    <h4 class="mini" style="margin-top:5mm">Gewenste resultaten</h4>
+    <ul class="dot two">
+    <li>een stabiele en goed georganiseerde kerkelijke organisatie;</li>
+    <li>voldoende ruimte voor liturgische, pastorale en sociale activiteiten;</li>
+    <li>veilige, toegankelijke en duurzame gebouwen;</li>
+    <li>lagere onderhouds- en energiekosten op de lange termijn;</li>
+    <li>grotere zelfstandigheid en continu&iuml;teit van de parochie;</li>
+    <li>een multifunctioneel kerkelijk centrum dat dienst doet als geestelijk, cultureel en sociaal ontmoetingspunt.</li>
+  </ul>
+    </div>
+  </div>
+
+</section>
+
+<section class="sec break">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 9</span>
+    <h2 id="h9">Gemeenschapsopbouw in de diaspora</h2>
+    <div class="rule"></div>
+  </div>
+  <p>De kerk erkent dat de diaspora een blijvende realiteit is.</p>
+  <p>Daarom zal de kerk investeren in:</p>
+  <ul class="dot">
+    <li>behoud van kerkelijke tradities</li>
+    <li>overdracht van kerkelijke talen en gezangen</li>
+    <li>bevordering van wederzijds begrip tussen generaties</li>
+    <li>versterking van de orthodoxe identiteit binnen de Nederlandse context</li>
+    <li>samenwerking met andere Ori&euml;ntaals-Orthodoxe gemeenschappen</li>
+  </ul>
+  <h3 class="sub-head">9.1&nbsp;&nbsp;Samenwerking met andere kerken</h3>
+  <p>De kerk streeft naar samenwerking met:</p>
+  <ul class="dot two">
+    <li>Eritrees-Orthodoxe gemeenschappen in Europa</li>
+    <li>Ethiopisch-Orthodoxe kerken</li>
+    <li>Koptisch-Orthodoxe kerken</li>
+    <li>Syrisch-Orthodoxe kerken</li>
+    <li>Armeens-Orthodoxe kerken</li>
+    <li>Raad van Kerken in Nederland</li>
+    <li>lokale geloofsgemeenschappen</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 10</span>
+    <h2 id="h10">Goed bestuur</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h4>Het bestuur is verantwoordelijk voor:</h4>
+      <ul class="dot">
+    <li>beleidsvorming</li>
+    <li>financieel beheer</li>
+    <li>toezicht</li>
+    <li>risicobeheersing</li>
+    <li>naleving van ANBI-verplichtingen</li>
+  </ul>
+    </div>
+    <div class="panel">
+      <h4>Het bestuur handelt volgens de principes van:</h4>
+      <ul class="dot">
+    <li>transparantie</li>
+    <li>integriteit</li>
+    <li>verantwoording</li>
+    <li>onafhankelijk toezicht</li>
+    <li>zorgvuldig financieel beheer</li>
+  </ul>
+    </div>
+  </div>
+  <p style="margin-top:5mm">Bestuurders ontvangen geen beloning voor hun bestuurswerkzaamheden,
+    behoudens vergoeding van daadwerkelijk gemaakte kosten conform de geldende regelgeving.</p>
+  <p>De geestelijkheid is verantwoordelijk voor:</p>
+  <ul class="dot two">
+    <li>erediensten</li>
+    <li>geestelijke begeleiding</li>
+    <li>onderwijs</li>
+    <li>pastoraat</li>
+  </ul>
+  <p style="margin-top:4mm">Vrijwilligers ondersteunen de uitvoering van activiteiten.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 11</span>
+    <h2 id="h11">Financieel beleid</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h4>De kerk financiert haar activiteiten uit:</h4>
+      <ul class="dot">
+    <li>vrijwillige bijdragen</li>
+    <li>collecten</li>
+    <li>schenkingen</li>
+    <li>giften</li>
+    <li>legaten</li>
+    <li>fondsenwerving</li>
+    <li>subsidies voor maatschappelijke projecten</li>
+  </ul>
+    </div>
+    <div class="panel">
+      <h4>Uitgaven zijn gericht op:</h4>
+      <ul class="dot">
+    <li>eredienst</li>
+    <li>pastorale zorg</li>
+    <li>onderhoud gebouwen</li>
+    <li>onderwijs</li>
+    <li>sociale hulpverlening</li>
+    <li>jeugdwerk</li>
+    <li>administratie</li>
+  </ul>
+    </div>
+  </div>
+  <p style="margin-top:5mm">Alle middelen worden uitsluitend aangewend ter ondersteuning van de
+    statutaire doelstellingen van de kerk.</p>
+  <p>Financi&euml;le verslaglegging vindt jaarlijks plaats.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 12</span>
+    <h2 id="h12">Sociale veiligheid</h2>
+    <div class="rule"></div>
+  </div>
+  <p>De kerk streeft naar een veilige omgeving voor alle bezoekers.</p>
+  <p>Daarom ontwikkelt zij beleid gericht op:</p>
+  <ul class="dot two">
+    <li>bescherming van kinderen</li>
+    <li>bescherming van kwetsbare volwassenen</li>
+    <li>vrijwilligersscreening</li>
+    <li>gedragscodes</li>
+    <li>vertrouwenspersonen</li>
+    <li>omgangsvormen</li>
+    <li>preventie van grensoverschrijdend gedrag</li>
+    <li>bewustwording en training</li>
+  </ul>
+</section>
+
+<section class="sec break">
+  <div class="doc-brand"><img src="logo-mark.jpg" alt=""><span class="nm">Debre Tsige Abune Endryas</span><span class="dc">Beleidsplan 2026&ndash;2040</span></div>
+  <div class="sec-head">
+    <span class="sec-num">Hoofdstuk 13</span>
+    <h2 id="h13">Evaluatie en verantwoording</h2>
+    <div class="rule"></div>
+  </div>
+  <p>De uitvoering van dit beleidsplan wordt gemonitord door:</p>
+  <ul class="dot two">
+    <li>jaarlijkse voortgangsrapportages</li>
+    <li>periodieke beleidsbeoordelingen</li>
+    <li>financi&euml;le verantwoording</li>
+    <li>evaluaties van activiteiten</li>
+    <li>consultatie van leden en vrijwilligers</li>
+  </ul>
+  <p style="margin-top:4mm">Elke vijf jaar wordt beoordeeld of actualisering van het beleidsplan
+    noodzakelijk is.</p>
+  <p>Jaarlijks wordt gerapporteerd over:</p>
+  <ul class="dot two">
+    <li>voortgang van doelstellingen;</li>
+    <li>financi&euml;le resultaten;</li>
+    <li>ledenontwikkeling;</li>
+    <li>jeugdparticipatie;</li>
+    <li>maatschappelijke projecten;</li>
+    <li>vrijwilligersinzet.</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <div class="closing">
+    <h2 id="h14">14&nbsp;&nbsp;Slotverklaring</h2>
+    <div class="rule"></div>
+    <p>De Eritrees-Orthodoxe Tewahedo Kerk in Nederland wil de periode 2026&ndash;2040 gebruiken om
+      niet alleen een geloofsgemeenschap te behouden, maar ook een nieuwe generatie toe te rusten
+      die orthodox geloof, maatschappelijke verantwoordelijkheid en onderlinge verbondenheid met
+      overtuiging kan voortzetten. Zo wil de kerk een duurzaam geestelijk thuis blijven voor
+      huidige en toekomstige generaties.</p>
+  </div>
+</section>
+
+</body>
+</html>
