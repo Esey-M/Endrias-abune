@@ -947,7 +947,7 @@ hr { border-color: var(--line); opacity: 1; }
     -webkit-overflow-scrolling: touch;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    max-width: 620px;
+    max-width: 680px;
 }
 
 .fin-table {
@@ -988,7 +988,7 @@ hr { border-color: var(--line); opacity: 1; }
 
 .fin-table tbody tr { border-bottom: 1px solid var(--line-soft); }
 
-/* "x € 1.000" unit row directly under the year headings */
+/* "x EUR 1.000" eenheidsregel onder de jaartallen */
 .fin-table .fin-unit td {
     font-size: .78rem;
     color: var(--muted);
@@ -996,50 +996,43 @@ hr { border-color: var(--line); opacity: 1; }
     padding-bottom: .45rem;
     background: var(--bg);
 }
-.fin-table .fin-unit td:first-child { background: var(--bg); }
 
-/* "Baten" / "Lasten" band */
-.fin-table .fin-head th {
-    font-family: 'Lora', Georgia, serif;
+/* Totaalregel: streep boven het bedrag, geen omschrijving (als in de boekhouding) */
+.fin-table .fin-sum td {
     font-weight: 600;
-    color: var(--navy-800);
-    background: var(--navy-50);
-    padding-top: .6rem;
-    padding-bottom: .6rem;
-}
-
-.fin-table .fin-total th,
-.fin-table .fin-total td {
-    font-weight: 700;
     color: var(--ink);
+    border-top: 1px solid var(--ink);
 }
+.fin-table .fin-sum th { border: 0; }
 
-.fin-table .fin-result th,
-.fin-table .fin-result td {
+/* Witregel tussen de blokken */
+.fin-table .fin-gap td {
+    padding: 0;
+    height: .85rem;
+    border: 0;
+}
+.fin-table tr.fin-gap { border-bottom: 0; }
+
+/* Netto resultaat */
+.fin-table .fin-netto th,
+.fin-table .fin-netto td {
     font-weight: 700;
-    color: #fff;
-    background: var(--navy-800);
+    color: var(--navy-800);
+    border-top: 2px solid var(--navy-800);
     padding-top: .7rem;
     padding-bottom: .7rem;
 }
-.fin-table .fin-result { border-bottom: 0; }
+.fin-table .fin-netto { border-bottom: 0; }
 
-/* Fit the two-year table inside a phone screen instead of scrolling it */
+/* Bedragen passen op een telefoon zonder te scrollen */
 @media (max-width: 575.98px) {
     .fin-table {
         min-width: 0;
         font-size: .78rem;
     }
-    .fin-table thead th {
-        font-size: .72rem;
-        padding: .55rem .5rem;
-    }
+    .fin-table thead th { font-size: .72rem; padding: .55rem .5rem; }
     .fin-table th[scope="row"],
-    .fin-table td {
-        padding: .5rem .5rem;
-    }
-    .fin-table td { width: 4.4rem; }
-    .fin-table .fin-unit td { font-size: .66rem; }
+    .fin-table td { padding: .5rem .5rem; }
 }
 
 /* Visually hidden but available to screen readers */
@@ -1383,4 +1376,11 @@ hr { border-color: var(--line); opacity: 1; }
     .lb-prev { left: 1.25rem; }
     .lb-next { right: 1.25rem; }
     .lb-frame figcaption { margin-bottom: 3.5rem; }
+}
+
+/* Periode-aanduiding boven de tabel in het jaarboek */
+.year-period {
+    font-size: .88rem;
+    color: var(--muted);
+    margin: 0 0 1rem;
 }
