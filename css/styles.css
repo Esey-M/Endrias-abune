@@ -168,13 +168,12 @@ hr { border-color: var(--line); opacity: 1; }
     padding: 0;
 }
 
+/* Het embleem is niet rond: volledig tonen, niet bijsnijden */
 .brand-logo {
     width: 48px;
     height: 48px;
     flex: 0 0 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid var(--line);
+    object-fit: contain;
     background: #fff;
 }
 
@@ -1047,38 +1046,39 @@ hr { border-color: var(--line); opacity: 1; }
 }
 
 /* ------------------------------------------------------------
-   Ingesloten PDF-weergave
+   Beleidsplan: paginabeelden, alleen online te lezen
    ------------------------------------------------------------ */
 
-.pdf-viewer {
+.doc-pages {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.doc-page {
+    margin: 0;
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(11, 31, 57, .08);
     overflow: hidden;
-    background: var(--navy-50);
-    line-height: 0;
 }
 
-.pdf-viewer iframe {
+/* De afbeelding zelf ontvangt geen klikken: geen "Afbeelding opslaan"
+   via rechtsklik en geen lang-indrukken-menu op telefoons. */
+.doc-page img {
     display: block;
     width: 100%;
-    height: min(78vh, 880px);
-    border: 0;
+    height: auto;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
-.pdf-note {
-    margin-top: 1rem;
-    font-size: .9rem;
-    color: var(--muted);
-}
-
-/* Mobiele browsers geven PDF's in een iframe vaak niet weer:
-   daar tonen wij een downloadkaart in plaats van de viewer. */
-.pdf-fallback { display: none; }
-
-@media (max-width: 767.98px) {
-    .pdf-viewer, .pdf-note { display: none; }
-    .pdf-fallback { display: block; }
-}
+.doc-print-note { display: none; }
 
 /* ------------------------------------------------------------
    Call-to-action band
@@ -1166,9 +1166,10 @@ hr { border-color: var(--line); opacity: 1; }
 .footer-brand img {
     width: 52px;
     height: 52px;
-    border-radius: 50%;
+    object-fit: contain;
+    border-radius: var(--radius);
     background: #fff;
-    padding: 2px;
+    padding: 3px;
 }
 .footer-brand strong {
     display: block;
@@ -1264,7 +1265,8 @@ hr { border-color: var(--line); opacity: 1; }
 
 @media print {
     .site-nav, .site-footer, .to-top, .hero-controls, .hero-arrow, .cta-band,
-    .pdf-viewer, .pdf-note { display: none !important; }
+    .doc-pages { display: none !important; }
+    .doc-print-note { display: block !important; }
     body { background: #fff; color: #000; }
     .panel, .goal-card, .feature-card, .year-item { border: 1px solid #ccc; box-shadow: none; page-break-inside: avoid; }
 }

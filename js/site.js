@@ -318,6 +318,25 @@
   }
 
   /* ----------------------------------------------------------
+     Beleidsplan: alleen online lezen, niet opslaan of afdrukken
+     ---------------------------------------------------------- */
+  function initProtectedDoc() {
+    var doc = document.querySelector('[data-protected]');
+    if (!doc) return;
+
+    ['contextmenu', 'dragstart', 'selectstart'].forEach(function (type) {
+      doc.addEventListener(type, function (e) { e.preventDefault(); });
+    });
+
+    // Ctrl/Cmd+P (afdrukken) en Ctrl/Cmd+S (opslaan) op deze pagina tegenhouden
+    document.addEventListener('keydown', function (e) {
+      if (!(e.ctrlKey || e.metaKey)) return;
+      var key = e.key.toLowerCase();
+      if (key === 'p' || key === 's') e.preventDefault();
+    });
+  }
+
+  /* ----------------------------------------------------------
      Current year in the footer
      ---------------------------------------------------------- */
   function initYear() {
@@ -332,6 +351,7 @@
     initHero();
     initAccordions();
     initLightbox();
+    initProtectedDoc();
     initToTop();
     initReveal();
     initYear();
